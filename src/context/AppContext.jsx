@@ -20,7 +20,7 @@ export function AppProvider({ children }) {
     })
   }
 
-  function addWin({ playerId, category, summary, minutesSaved }) {
+  function addWin({ playerId, category, summary, minutesSaved, rating = 0, recommendation = '' }) {
     update((s) => ({
       ...s,
       wins: [
@@ -32,6 +32,8 @@ export function AppProvider({ children }) {
           category,
           summary,
           minutesSaved: Number(minutesSaved) || 0,
+          rating: Number(rating) || 0,
+          recommendation: recommendation || '',
           verified: false,
           createdAt: new Date().toISOString(),
         },
