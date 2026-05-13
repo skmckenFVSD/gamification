@@ -142,48 +142,177 @@ main { flex: 1; max-width: 1100px; margin: 0 auto; padding: 24px; width: 100%; }
   font-weight: 600;
 }
 
-/* Rink */
-.rink-wrap {
-  background: var(--card-bg);
-  border-radius: 16px;
-  padding: 16px;
-  border: 1px solid var(--border);
-  margin: 16px 0;
+/* ====================================================== */
+/* Rink hero — FVSD aurora rink image                     */
+/* ====================================================== */
+.rink-hero {
   position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 16px 0;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 16px rgba(20, 32, 70, 0.15);
+  background: #0E1530;
+  aspect-ratio: 16 / 9;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rink-hero__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.rink-hero__overlay {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
 }
 .period-badge {
-  position: absolute;
-  top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--ink);
+  background: rgba(31, 42, 68, 0.92);
   color: white;
-  padding: 4px 14px;
+  padding: 6px 16px;
   border-radius: 999px;
   font-size: 13px;
   font-weight: 700;
-  z-index: 2;
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
-.period-badge[data-period="overtime"] { background: var(--warn); color: var(--ink); }
-.period-badge[data-period="shootout"] { background: var(--rink-red); }
+.period-badge[data-period="overtime"] { background: rgba(255, 179, 71, 0.95); color: var(--ink); }
+.period-badge[data-period="shootout"] { background: rgba(217, 67, 67, 0.95); }
 
-.rink { width: 100%; height: auto; max-width: 800px; display: block; margin: 0 auto; }
-.shots-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 12px;
-}
-.shots-ticker {
-  background: var(--page-bg);
-  padding: 12px;
-  border-radius: 8px;
+.rink-hero__teams {
+  position: absolute;
+  inset: 0;
   display: flex;
-  gap: 12px;
-  align-items: center;
-  font-size: 14px;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 18px 14px;
+  pointer-events: none;
 }
-.shots-ticker strong { flex: 1; }
+.rink-hero__team {
+  background: rgba(14, 21, 48, 0.78);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  backdrop-filter: blur(3px);
+}
+.rink-hero__team--home { border-left: 3px solid #D94343; }
+.rink-hero__team--away { border-right: 3px solid #3A6EE0; }
+
+/* ====================================================== */
+/* Scoreboard — image with positioned digit overlays      */
+/* ====================================================== */
+.scoreboard {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto 16px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 16px rgba(20, 32, 70, 0.15);
+  aspect-ratio: 600 / 336;
+}
+.scoreboard__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.scoreboard__digits {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.sb-digit {
+  position: absolute;
+  color: #FF3D2E;
+  font-family: 'Courier New', 'DS-Digital', monospace;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 6px rgba(255, 61, 46, 0.6), 0 0 2px rgba(255, 100, 80, 0.8);
+  line-height: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Clock — top center, 4 digits */
+.sb-digit--clock {
+  top: 21%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14%;
+  height: 9%;
+  font-size: clamp(14px, 2.6vw, 24px);
+}
+/* HOME big score — left, 2 digits */
+.sb-digit--home {
+  top: 35%;
+  left: 11%;
+  width: 25%;
+  height: 22%;
+  font-size: clamp(28px, 6.5vw, 60px);
+}
+/* VISITOR big score — right, 2 digits */
+.sb-digit--visitor {
+  top: 35%;
+  right: 11%;
+  width: 25%;
+  height: 22%;
+  font-size: clamp(28px, 6.5vw, 60px);
+}
+/* PENALTY — bottom left, single digit */
+.sb-digit--penalty {
+  top: 77%;
+  left: 21%;
+  width: 6%;
+  height: 12%;
+  font-size: clamp(14px, 2.8vw, 26px);
+}
+/* PERIOD — bottom center, single digit */
+.sb-digit--period {
+  top: 77%;
+  left: 53.5%;
+  transform: translateX(-50%);
+  width: 6%;
+  height: 12%;
+  font-size: clamp(14px, 2.8vw, 26px);
+}
+/* SHOTS — bottom right, single digit */
+.sb-digit--shots {
+  top: 77%;
+  right: 13%;
+  width: 6%;
+  height: 12%;
+  font-size: clamp(14px, 2.8vw, 26px);
+}
+
+.scoreboard__legend {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 18px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  pointer-events: none;
+}
+.scoreboard__legend strong { color: white; }
+
+.quick-links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.quick-links a { color: var(--copilot-purple); text-decoration: none; font-weight: 600; font-size: 14px; }
+.quick-links a:hover { text-decoration: underline; }
 
 /* Callouts */
 .callouts {
@@ -348,39 +477,13 @@ main { flex: 1; max-width: 1100px; margin: 0 auto; padding: 24px; width: 100%; }
   flex-wrap: wrap;
 }
 .log-banner__title { display: flex; align-items: center; gap: 14px; }
-.log-banner__icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
-  background: rgba(255,255,255,0.95);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-}
-.log-banner__icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 8px;
-}
 
-/* Top-bar brand logo */
+/* Top-bar brand logo (transparent SVG — no panel) */
 .brand-logo {
-  width: 32px;
-  height: 32px;
-  border-radius: 7px;
-  background: rgba(255,255,255,0.9);
-  padding: 2px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
-}
-.brand-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  width: 36px;
+  height: 36px;
   display: block;
-  border-radius: 5px;
+  object-fit: contain;
 }
 .log-banner h1 { margin: 0; font-size: 22px; line-height: 1.2; color: white; }
 .log-banner p { margin: 4px 0 0; color: rgba(234, 241, 255, 0.72); font-size: 13px; }

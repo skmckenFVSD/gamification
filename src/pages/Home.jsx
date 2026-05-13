@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Rink from '../components/Rink.jsx'
+import Scoreboard from '../components/Scoreboard.jsx'
 import { useApp } from '../context/AppContext.jsx'
 
 function daysLeft(endDate) {
@@ -8,10 +9,10 @@ function daysLeft(endDate) {
 }
 
 export default function Home() {
-  const { activeGame, gameWins, players, departments, teamA, teamB } = useApp()
+  const { activeGame, gameWins, players, departments } = useApp()
   const playerById = Object.fromEntries(players.map((p) => [p.id, p]))
   const deptById = Object.fromEntries(departments.map((d) => [d.id, d]))
-  const yesterday = [...gameWins]
+  const topWin = [...gameWins]
     .filter((w) => w.verified)
     .sort((a, b) => (b.minutesSaved || 0) - (a.minutesSaved || 0))[0]
 
@@ -25,14 +26,16 @@ export default function Home() {
 
       <Rink />
 
+      <Scoreboard />
+
       <section className="callouts">
         <div className="callout">
           <h3>Top win so far</h3>
-          {yesterday ? (
+          {topWin ? (
             <p>
-              <strong>{playerById[yesterday.playerId]?.name}</strong> ({deptById[playerById[yesterday.playerId]?.departmentId]?.name})
+              <strong>{playerById[topWin.playerId]?.name}</strong> ({deptById[playerById[topWin.playerId]?.departmentId]?.name})
               <br />
-              <em>"{yesterday.summary}"</em> — {yesterday.minutesSaved} min saved
+              <em>"{topWin.summary}"</em> — {topWin.minutesSaved} min saved
             </p>
           ) : (
             <p>No verified wins yet. <Link to="/submit">Be the first.</Link></p>
@@ -40,14 +43,12 @@ export default function Home() {
         </div>
 
         <div className="callout">
-          <h3>Live standings</h3>
-          <table>
-            <thead><tr><th>Team</th><th>Goals</th><th>Shots</th><th>Hours saved</th></tr></thead>
-            <tbody>
-              <tr><td>{activeGame.teamA.name}</td><td>{teamA.goals}</td><td>{teamA.shotsOnGoal}</td><td>{Math.round(teamA.totalMinutesSaved/60)}</td></tr>
-              <tr><td>{activeGame.teamB.name}</td><td>{teamB.goals}</td><td>{teamB.shotsOnGoal}</td><td>{Math.round(teamB.totalMinutesSaved/60)}</td></tr>
-            </tbody>
-          </table>
+          <h3>Quick links</h3>
+          <ul className="quick-links">
+            <li><Link to="/submit">Log a Copilot Win →</Link></li>
+            <li><Link to="/hall-of-fame">Hall of Fame →</Link></li>
+            <li><Link to="/arcade">Arcade →</Link></li>
+          </ul>
         </div>
       </section>
 

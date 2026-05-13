@@ -82,9 +82,6 @@ export default function SubmitWin() {
         </div>
         <div className="log-banner__row">
           <div className="log-banner__title">
-            <div className="log-banner__icon">
-              <img src={`${import.meta.env.BASE_URL}copilot-rink-logo.png`} alt="CopilotRink" />
-            </div>
             <div>
               <h1>Log a Copilot Win</h1>
               <p>Every win counts toward your team's shots on goal.</p>
