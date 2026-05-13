@@ -1,0 +1,6 @@
+[
+  { "id": "a1", "playerId": "p1", "score": 4200, "createdAt": "2026-05-12T08:30:00-06:00" },
+  { "id": "a2", "playerId": "p2", "score": 5100, "createdAt": "2026-05-12T16:12:00-06:00" },
+  { "id": "a3", "playerId": "p7", "score": 3700, "createdAt": "2026-05-13T09:55:00-06:00" },
+  { "id": "a4", "playerId": "p4", "score": 6300, "createdAt": "2026-05-13T11:08:00-06:00" }
+]

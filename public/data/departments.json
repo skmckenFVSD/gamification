@@ -1,0 +1,6 @@
+[
+  { "id": "tech",       "name": "Technology Services", "team": "A", "color": "#7B5BFF" },
+  { "id": "ops",        "name": "Operations",          "team": "A", "color": "#4FC3F7" },
+  { "id": "curriculum", "name": "Curriculum & Learning","team": "B", "color": "#FF6B6B" },
+  { "id": "business",   "name": "Business Services",   "team": "B", "color": "#FFB347" }
+]

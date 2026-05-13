@@ -1,0 +1,12 @@
+[
+  { "id": "w1",  "gameId": "g1", "playerId": "p1",  "category": "drafting",     "summary": "Drafted weekly tech update — saved time vs. manual.",         "minutesSaved": 45, "verified": true,  "createdAt": "2026-05-11T09:14:00-06:00" },
+  { "id": "w2",  "gameId": "g1", "playerId": "p2",  "category": "email-triage", "summary": "Summarized 30-message thread before standup.",                "minutesSaved": 25, "verified": true,  "createdAt": "2026-05-11T11:02:00-06:00" },
+  { "id": "w3",  "gameId": "g1", "playerId": "p4",  "category": "meeting-prep", "summary": "Generated agenda + action items for ops sync.",               "minutesSaved": 30, "verified": true,  "createdAt": "2026-05-11T14:30:00-06:00" },
+  { "id": "w4",  "gameId": "g1", "playerId": "p7",  "category": "drafting",     "summary": "Drafted parent newsletter — tightened tone in Word.",         "minutesSaved": 60, "verified": true,  "createdAt": "2026-05-12T08:45:00-06:00" },
+  { "id": "w5",  "gameId": "g1", "playerId": "p8",  "category": "research",    "summary": "Pulled curriculum framework comparison from SharePoint.",     "minutesSaved": 90, "verified": true,  "createdAt": "2026-05-12T10:15:00-06:00" },
+  { "id": "w6",  "gameId": "g1", "playerId": "p10", "category": "analysis",    "summary": "Built Q4 spending pivot in Excel with Copilot.",              "minutesSaved": 75, "verified": true,  "createdAt": "2026-05-12T13:20:00-06:00" },
+  { "id": "w7",  "gameId": "g1", "playerId": "p3",  "category": "drafting",    "summary": "Generated SOP draft for printer rollout.",                    "minutesSaved": 40, "verified": false, "createdAt": "2026-05-13T09:00:00-06:00" },
+  { "id": "w8",  "gameId": "g1", "playerId": "p5",  "category": "email-triage","summary": "Inbox triage — flagged 12 urgent vs. low-priority.",          "minutesSaved": 20, "verified": true,  "createdAt": "2026-05-13T10:30:00-06:00" },
+  { "id": "w9",  "gameId": "g1", "playerId": "p9",  "category": "research",    "summary": "Researched reading-assessment tools, ranked top 3.",          "minutesSaved": 50, "verified": false, "createdAt": "2026-05-13T11:45:00-06:00" },
+  { "id": "w10", "gameId": "g1", "playerId": "p11", "category": "analysis",    "summary": "Reconciled budget variance with formula assist.",             "minutesSaved": 35, "verified": true,  "createdAt": "2026-05-13T12:10:00-06:00" }
+]

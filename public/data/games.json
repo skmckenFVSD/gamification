@@ -1,0 +1,12 @@
+[
+  {
+    "id": "g1",
+    "name": "Season Opener — Spring 2026",
+    "startDate": "2026-05-11",
+    "endDate": "2026-06-07",
+    "teamA": { "name": "Ice Hawks",     "departmentIds": ["tech", "ops"] },
+    "teamB": { "name": "Tundra Wolves", "departmentIds": ["curriculum", "business"] },
+    "prizeNote": "Winning team picks the next staff PD lunch venue.",
+    "status": "active"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  { "id": "p1",  "name": "Scott McKenzie",    "departmentId": "tech",       "isLead": true,  "isAdmin": true },
+  { "id": "p2",  "name": "Riley Chen",        "departmentId": "tech",       "isLead": false, "isAdmin": false },
+  { "id": "p3",  "name": "Morgan Park",       "departmentId": "tech",       "isLead": false, "isAdmin": false },
+  { "id": "p4",  "name": "Dana Whitehorse",   "departmentId": "ops",        "isLead": true,  "isAdmin": false },
+  { "id": "p5",  "name": "Sam Toth",          "departmentId": "ops",        "isLead": false, "isAdmin": false },
+  { "id": "p6",  "name": "Jordan Auger",      "departmentId": "ops",        "isLead": false, "isAdmin": false },
+  { "id": "p7",  "name": "Casey Lambert",     "departmentId": "curriculum", "isLead": true,  "isAdmin": false },
+  { "id": "p8",  "name": "Taylor Mercredi",   "departmentId": "curriculum", "isLead": false, "isAdmin": false },
+  { "id": "p9",  "name": "Avery Northwind",   "departmentId": "curriculum", "isLead": false, "isAdmin": false },
+  { "id": "p10", "name": "Quinn Bourassa",    "departmentId": "business",   "isLead": true,  "isAdmin": false },
+  { "id": "p11", "name": "Reese Cardinal",    "departmentId": "business",   "isLead": false, "isAdmin": false },
+  { "id": "p12", "name": "Skyler Ladouceur",  "departmentId": "business",   "isLead": false, "isAdmin": false }
+]
