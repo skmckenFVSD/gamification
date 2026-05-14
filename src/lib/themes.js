@@ -1,11 +1,13 @@
+const assetPath = (path) => `${import.meta.env.BASE_URL}${path}`;
+
 export const themes = {
   fall: {
     id: "fall",
     name: "Fall",
     label: "Fall Season",
-    backgroundImage: "/assets/fvsd-faceoff/backgrounds/fall_background_4k.webp",
-    rinkImage: "/assets/fvsd-faceoff/rink/rink_fall.webp",
-    overlayImage: "/assets/fvsd-faceoff/overlays/light_bokeh_overlay.png",
+    backgroundImage: assetPath("assets/fvsd-faceoff/backgrounds/fall_background_4k.jpg"),
+    rinkImage: assetPath("assets/fvsd-faceoff/rink/rink_fall_full.jpg"),
+    overlayImage: assetPath("assets/fvsd-faceoff/overlays/light_bokeh_overlay.png"),
     className: "season-fall",
     colors: {
       pageFrom: "#120A05",
@@ -28,9 +30,9 @@ export const themes = {
     id: "winter",
     name: "Winter",
     label: "Winter Season",
-    backgroundImage: "/assets/fvsd-faceoff/backgrounds/winter_background_4k.webp",
-    rinkImage: "/assets/fvsd-faceoff/rink/rink_winter.webp",
-    overlayImage: "/assets/fvsd-faceoff/overlays/aurora_glow_overlay.png",
+    backgroundImage: assetPath("assets/fvsd-faceoff/backgrounds/winter_background_4k.jpg"),
+    rinkImage: assetPath("assets/fvsd-faceoff/rink/rink_winter_full.jpg"),
+    overlayImage: assetPath("assets/fvsd-faceoff/overlays/aurora_glow_overlay.png"),
     className: "season-winter",
     colors: {
       pageFrom: "#03101F",
@@ -53,9 +55,9 @@ export const themes = {
     id: "spring",
     name: "Spring",
     label: "Spring Season",
-    backgroundImage: "/assets/fvsd-faceoff/backgrounds/spring_background_4k.webp",
-    rinkImage: "/assets/fvsd-faceoff/rink/rink_spring.webp",
-    overlayImage: "/assets/fvsd-faceoff/overlays/horizon_haze.png",
+    backgroundImage: assetPath("assets/fvsd-faceoff/backgrounds/spring_background_4k.jpg"),
+    rinkImage: assetPath("assets/fvsd-faceoff/rink/rink_spring_full.jpg"),
+    overlayImage: assetPath("assets/fvsd-faceoff/overlays/horizon_haze.png"),
     className: "season-spring",
     colors: {
       pageFrom: "#061F25",

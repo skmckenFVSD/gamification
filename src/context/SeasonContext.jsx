@@ -5,9 +5,10 @@ const SeasonContext = createContext(null);
 
 function resolveDefaultSeason() {
   const month = new Date().getMonth();
-  if (month >= 8 && month <= 10) return "fall";
-  if (month >= 11 || month <= 2) return "winter";
-  return "spring";
+  if (month >= 8 && month <= 11) return "fall";
+  if (month >= 0 && month <= 2) return "winter";
+  if (month >= 3 && month <= 5) return "spring";
+  return "fall";
 }
 
 export function SeasonProvider({ children, initialSeason }) {

@@ -1,5 +1,4 @@
 import React from "react";
-import { GlassPanel } from "../components/FaceoffPreview.jsx";
 import { useSeason } from "../context/SeasonContext.jsx";
 
 export default function PagePlaceholder({ title, kicker, description, icon: Icon, children }) {
@@ -7,7 +6,7 @@ export default function PagePlaceholder({ title, kicker, description, icon: Icon
 
   return (
     <section className="faceoff-slot">
-      <GlassPanel theme={theme} className="p-8 md:p-10">
+      <div className="faceoff-glass faceoff-panel">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div>
             {kicker ? (
@@ -32,7 +31,7 @@ export default function PagePlaceholder({ title, kicker, description, icon: Icon
           ) : null}
         </div>
         {children ? <div className="mt-6">{children}</div> : null}
-      </GlassPanel>
+      </div>
     </section>
   );
 }

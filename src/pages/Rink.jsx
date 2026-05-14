@@ -1,63 +1,171 @@
 import React from "react";
-import { ChevronRight, MessageSquareText, ShieldCheck } from "lucide-react";
+import { Link } from "react-router-dom";
 import {
-  Scoreboard,
-  AchievementBadge,
-  Leaderboard,
-  FaceoffButton,
-} from "../components/FaceoffPreview.jsx";
+  ChevronRight,
+  Grid2X2,
+  MessageSquareText,
+  PlayCircle,
+  ShieldCheck,
+  Sparkles,
+  Star,
+  Trophy,
+  Users,
+  Zap,
+} from "lucide-react";
+import Scoreboard from "../components/faceoff/Scoreboard.tsx";
+import MetricCard from "../components/faceoff/MetricCard.tsx";
+import Leaderboard from "../components/faceoff/Leaderboard.tsx";
 import { useSeason } from "../context/SeasonContext.jsx";
+
+const assetPath = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 export default function Rink() {
   const { theme } = useSeason();
 
   return (
-    <>
-      <section className="faceoff-slot faceoff-slot-hero">
-        <div>
-          <div
-            className="mb-4 inline-flex rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm"
-            style={{ color: theme.colors.primary }}
-          >
+    <div className="faceoff-dashboard">
+      <div className="dashboard-rink-layer" aria-hidden="true">
+        <img
+          className="dashboard-rink-surface"
+          src={theme.rinkImage}
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          className="dashboard-rink-markings"
+          src={assetPath("assets/fvsd-faceoff/rink/rink_markings_overlay.png")}
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          className="dashboard-rink-boards"
+          src={assetPath("assets/fvsd-faceoff/rink/rink_boards_overlay.png")}
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          className="dashboard-rink-ice"
+          src={assetPath("assets/fvsd-faceoff/rink/details/wet_reflections_overlay.png")}
+          alt=""
+          aria-hidden="true"
+        />
+        <div className="dashboard-rink-fade" />
+      </div>
+
+      <section className="faceoff-hero-stage">
+        <div className="faceoff-dashboard-hero__copy">
+          <div className="faceoff-season-chip" style={{ color: theme.colors.primary }}>
             {theme.name} Season
           </div>
-          <h1 className="mb-5 text-4xl font-black leading-tight md:text-6xl">
-            Every Prompt. Every Point. Every Impact.
+          <h1>
+            Every Prompt.<br />
+            Every Point.<br />
+            Every Impact.
           </h1>
-          <p className="mb-8 max-w-xl text-base text-slate-200 md:text-lg">
-            Track Copilot adoption across the Division through Department challenges,
-            achievements, XP, and seasonal league play.
+          <p>
+            Track. Compete. Collaborate. FVSD Faceoff turns Microsoft 365 Copilot
+            adoption into a visible hockey season for the whole Division.
           </p>
-          <div className="flex flex-wrap gap-3">
-            <FaceoffButton theme={theme}>
-              View Standings <ChevronRight size={18} />
-            </FaceoffButton>
-            <FaceoffButton theme={theme} variant="secondary">
-              Post a Win
-            </FaceoffButton>
+          <div className="faceoff-dashboard-actions">
+            <Link className="faceoff-button-primary" to="/leaderboard">
+              <Grid2X2 size={18} /> View Dashboard
+            </Link>
+            <Link className="faceoff-button-secondary" to="/games">
+              <PlayCircle size={18} /> How It Works
+            </Link>
           </div>
         </div>
 
-        <div className="faceoff-slot faceoff-slot-scoreboard">
-          <Scoreboard theme={theme} />
+        <div className="faceoff-hero-visual-scene" aria-label="FVSD Faceoff rink scene">
+          <div className="faceoff-hero-scoreboard">
+            <Scoreboard theme={theme} />
+          </div>
+          <img
+            className="faceoff-hero-player faceoff-hero-player--left"
+            src={assetPath("assets/fvsd-faceoff/characters/skater-white.png")}
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            className="faceoff-hero-player faceoff-hero-player--right"
+            src={assetPath("assets/fvsd-faceoff/characters/skater-cyan.png")}
+            alt=""
+            aria-hidden="true"
+          />
+          <div className="faceoff-hero-ice-reflection" aria-hidden="true" />
         </div>
       </section>
 
-      <section className="faceoff-slot faceoff-slot-supporting">
-        <AchievementBadge
-          theme={theme}
-          title="Prompt Master"
-          subtitle="100 high-quality prompts"
-          icon={MessageSquareText}
-        />
-        <AchievementBadge
-          theme={theme}
-          title="Data Defender"
-          subtitle="Secure, responsible AI use"
-          icon={ShieldCheck}
-        />
-        <Leaderboard theme={theme} />
+      <section className="faceoff-dashboard-strip" aria-label="Dashboard preview">
+        <div className="faceoff-dashboard-panel">
+          <article className="faceoff-progress-card">
+            <div className="faceoff-progress-ring" aria-label="Level 12, 2450 of 3000 XP">
+              <Star size={25} aria-hidden="true" />
+              <span>Level</span>
+              <strong>12</strong>
+              <small>2,450 / 3,000 XP</small>
+            </div>
+            <div className="faceoff-progress-stat">
+              <span>Points This Month</span>
+              <strong>2,450</strong>
+            </div>
+            <div className="faceoff-progress-stat">
+              <span>Rank</span>
+              <strong>2</strong>
+            </div>
+          </article>
+
+          <div className="faceoff-impact-panel">
+            <div className="faceoff-panel__header">
+              <p className="faceoff-kicker">Division Impact</p>
+              <h2>Copilot Adoption Pulse</h2>
+            </div>
+            <div className="faceoff-impact-grid">
+              <MetricCard icon={Users} label="Total Users" value="342" detail="+18%" />
+              <MetricCard icon={Zap} label="Total Actions" value="12,458" detail="Preview" />
+              <MetricCard icon={Sparkles} label="Avg. Actions / User" value="50.8" detail="+15%" />
+              <MetricCard icon={Trophy} label="Points Earned" value="78,900" detail="DOM rendered" />
+            </div>
+            <section className="faceoff-activity-feed" aria-labelledby="activity-feed-heading">
+              <div className="faceoff-activity-feed__header">
+                <h3 id="activity-feed-heading">Activity Feed</h3>
+                <Link to="/leaderboard">
+                  View All <ChevronRight size={14} />
+                </Link>
+              </div>
+              <ul>
+                <li>
+                  <MessageSquareText size={17} /> Prompt Master badge preview <span>2h ago</span>
+                </li>
+                <li>
+                  <ShieldCheck size={17} /> Responsible AI challenge completed <span>4h ago</span>
+                </li>
+                <li>
+                  <Sparkles size={17} /> Classroom Champion milestone reached <span>6h ago</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <Leaderboard title="Top Performers" />
+        </div>
+
+        <section className="faceoff-challenge-strip" aria-label="Challenge of the month">
+          <Trophy size={44} aria-hidden="true" />
+          <div>
+            <p className="faceoff-kicker">Challenge of the Month</p>
+            <h2>Copilot Innovator</h2>
+            <p>Discover new ways to use Copilot in your daily work.</p>
+          </div>
+          <div className="faceoff-challenge-progress" aria-label="75 percent complete">
+            <span />
+          </div>
+          <strong>75%</strong>
+          <Link className="faceoff-button-primary" to="/challenges">
+            View Challenge <ChevronRight size={18} />
+          </Link>
+        </section>
       </section>
-    </>
+    </div>
   );
 }
