@@ -3,11 +3,9 @@
 <img src="./public/copilot-rink-logo.svg" alt="FVSD Faceoff Logo" width="180" />
 
 # FVSD Faceoff
+### Competing Together for the Future of AI in Education
 
 </div>
-
-# FVSD Faceoff
-### Competing Together for the Future of AI in Education
 
 *A premium hockey-inspired Microsoft 365 Copilot adoption experience built for Fort Vermilion School Division.*
 
