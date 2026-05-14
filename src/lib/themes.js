@@ -6,7 +6,7 @@ export const themes = {
     name: "Fall",
     label: "Fall Season",
     backgroundImage: assetPath("assets/fvsd-faceoff/backgrounds/fall_background_4k.jpg"),
-    rinkImage: assetPath("assets/fvsd-faceoff/rink/rink_fall_full.jpg"),
+    rinkImage: assetPath("assets/fvsd-faceoff/rink/_alt/rink_fall_simple.png"),
     overlayImage: assetPath("assets/fvsd-faceoff/overlays/light_bokeh_overlay.png"),
     className: "season-fall",
     colors: {
@@ -31,7 +31,7 @@ export const themes = {
     name: "Winter",
     label: "Winter Season",
     backgroundImage: assetPath("assets/fvsd-faceoff/backgrounds/winter_background_4k.jpg"),
-    rinkImage: assetPath("assets/fvsd-faceoff/rink/rink_winter_full.jpg"),
+    rinkImage: assetPath("assets/fvsd-faceoff/rink/_alt/rink_winter_simple.png"),
     overlayImage: assetPath("assets/fvsd-faceoff/overlays/aurora_glow_overlay.png"),
     className: "season-winter",
     colors: {
@@ -56,7 +56,7 @@ export const themes = {
     name: "Spring",
     label: "Spring Season",
     backgroundImage: assetPath("assets/fvsd-faceoff/backgrounds/spring_background_4k.jpg"),
-    rinkImage: assetPath("assets/fvsd-faceoff/rink/rink_spring_full.jpg"),
+    rinkImage: assetPath("assets/fvsd-faceoff/rink/_alt/rink_spring_simple.png"),
     overlayImage: assetPath("assets/fvsd-faceoff/overlays/horizon_haze.png"),
     className: "season-spring",
     colors: {

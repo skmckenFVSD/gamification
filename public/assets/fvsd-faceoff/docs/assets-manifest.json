@@ -1,14 +1,14 @@
 {
   "library_bound_paths": [
-    "public/assets/backgrounds/fall_background_4k.webp",
-    "public/assets/backgrounds/winter_background_4k.webp",
-    "public/assets/backgrounds/spring_background_4k.webp",
-    "public/assets/rink/rink_fall.webp",
-    "public/assets/rink/rink_winter.webp",
-    "public/assets/rink/rink_spring.webp",
-    "public/assets/overlays/light_bokeh_overlay.png",
-    "public/assets/overlays/aurora_glow_overlay.png",
-    "public/assets/overlays/horizon_haze.png"
+    "assets/fvsd-faceoff/backgrounds/fall_background_4k.webp",
+    "assets/fvsd-faceoff/backgrounds/winter_background_4k.webp",
+    "assets/fvsd-faceoff/backgrounds/spring_background_4k.webp",
+    "assets/fvsd-faceoff/rink/rink_fall.webp",
+    "assets/fvsd-faceoff/rink/rink_winter.webp",
+    "assets/fvsd-faceoff/rink/rink_spring.webp",
+    "assets/fvsd-faceoff/overlays/light_bokeh_overlay.png",
+    "assets/fvsd-faceoff/overlays/aurora_glow_overlay.png",
+    "assets/fvsd-faceoff/overlays/horizon_haze.png"
   ],
   "phases": {
     "phase_1": {
@@ -41,1337 +41,1337 @@
     {
       "phase": 1,
       "concept": "aurora_glow_overlay_concept.png",
-      "production": "public/assets/overlays/aurora_glow_overlay.png",
+      "production": "assets/fvsd-faceoff/overlays/aurora_glow_overlay.png",
       "category": "overlay",
       "size_bytes": 48217
     },
     {
       "phase": 1,
       "concept": "clouds_concept.png",
-      "production": "public/assets/overlays/clouds.png",
+      "production": "assets/fvsd-faceoff/overlays/clouds.png",
       "category": "overlay",
       "size_bytes": 29541
     },
     {
       "phase": 1,
       "concept": "fall_background_concept.jpg",
-      "production": "public/assets/backgrounds/fall_background_4k.jpg",
+      "production": "assets/fvsd-faceoff/backgrounds/fall_background_4k.jpg",
       "category": "background",
       "size_bytes": 86207
     },
     {
       "phase": 1,
       "concept": "frosted_edge_overlay_concept.png",
-      "production": "public/assets/overlays/frosted_edge_overlay.png",
+      "production": "assets/fvsd-faceoff/overlays/frosted_edge_overlay.png",
       "category": "overlay",
       "size_bytes": 71838
     },
     {
       "phase": 1,
       "concept": "horizon_haze_concept.png",
-      "production": "public/assets/overlays/horizon_haze.png",
+      "production": "assets/fvsd-faceoff/overlays/horizon_haze.png",
       "category": "overlay",
       "size_bytes": 14454
     },
     {
       "phase": 1,
       "concept": "ice_reflection_overlay_concept.png",
-      "production": "public/assets/overlays/ice_reflection_overlay.png",
+      "production": "assets/fvsd-faceoff/overlays/ice_reflection_overlay.png",
       "category": "overlay",
       "size_bytes": 86294
     },
     {
       "phase": 1,
       "concept": "light_bokeh_overlay_concept.png",
-      "production": "public/assets/overlays/light_bokeh_overlay.png",
+      "production": "assets/fvsd-faceoff/overlays/light_bokeh_overlay.png",
       "category": "overlay",
       "size_bytes": 49976
     },
     {
       "phase": 1,
       "concept": "moon_glow_concept.png",
-      "production": "public/assets/overlays/moon_glow.png",
+      "production": "assets/fvsd-faceoff/overlays/moon_glow.png",
       "category": "overlay",
       "size_bytes": 22213
     },
     {
       "phase": 1,
       "concept": "rink_boards_overlay_concept.png",
-      "production": "public/assets/rink/_alt/rink_boards_overlay_p1.png",
+      "production": "assets/fvsd-faceoff/rink/_alt/rink_boards_overlay_p1.png",
       "category": "rink-alt",
       "size_bytes": 110041
     },
     {
       "phase": 1,
       "concept": "rink_fall_concept.png",
-      "production": "public/assets/rink/_alt/rink_fall_simple.png",
+      "production": "assets/fvsd-faceoff/rink/_alt/rink_fall_simple.png",
       "category": "rink-alt",
       "size_bytes": 124694
     },
     {
       "phase": 1,
       "concept": "rink_spring_concept.png",
-      "production": "public/assets/rink/_alt/rink_spring_simple.png",
+      "production": "assets/fvsd-faceoff/rink/_alt/rink_spring_simple.png",
       "category": "rink-alt",
       "size_bytes": 113603
     },
     {
       "phase": 1,
       "concept": "rink_winter_concept.png",
-      "production": "public/assets/rink/_alt/rink_winter_simple.png",
+      "production": "assets/fvsd-faceoff/rink/_alt/rink_winter_simple.png",
       "category": "rink-alt",
       "size_bytes": 110015
     },
     {
       "phase": 1,
       "concept": "snow_particles_overlay_concept.png",
-      "production": "public/assets/overlays/snow_particles_overlay.png",
+      "production": "assets/fvsd-faceoff/overlays/snow_particles_overlay.png",
       "category": "overlay",
       "size_bytes": 65977
     },
     {
       "phase": 1,
       "concept": "spring_background_concept.jpg",
-      "production": "public/assets/backgrounds/spring_background_4k.jpg",
+      "production": "assets/fvsd-faceoff/backgrounds/spring_background_4k.jpg",
       "category": "background",
       "size_bytes": 89473
     },
     {
       "phase": 1,
       "concept": "sun_flare_concept.png",
-      "production": "public/assets/overlays/sun_flare.png",
+      "production": "assets/fvsd-faceoff/overlays/sun_flare.png",
       "category": "overlay",
       "size_bytes": 18850
     },
     {
       "phase": 1,
       "concept": "winter_background_concept.jpg",
-      "production": "public/assets/backgrounds/winter_background_4k.jpg",
+      "production": "assets/fvsd-faceoff/backgrounds/winter_background_4k.jpg",
       "category": "background",
       "size_bytes": 87524
     },
     {
       "phase": 2,
       "concept": "bench_overlay_concept.png",
-      "production": "public/assets/rink/props/bench_overlay.png",
+      "production": "assets/fvsd-faceoff/rink/props/bench_overlay.png",
       "category": "rink-prop",
       "size_bytes": 19575
     },
     {
       "phase": 2,
       "concept": "corner_accent_concept.png",
-      "production": "public/assets/rink/props/corner_accent.png",
+      "production": "assets/fvsd-faceoff/rink/props/corner_accent.png",
       "category": "rink-prop",
       "size_bytes": 17888
     },
     {
       "phase": 2,
       "concept": "crack_details_overlay_concept.png",
-      "production": "public/assets/rink/details/crack_details_overlay.png",
+      "production": "assets/fvsd-faceoff/rink/details/crack_details_overlay.png",
       "category": "rink-detail",
       "size_bytes": 31737
     },
     {
       "phase": 2,
       "concept": "edge_glow_blue_concept.png",
-      "production": "public/assets/rink/edge_glow/edge_glow_blue.png",
+      "production": "assets/fvsd-faceoff/rink/edge_glow/edge_glow_blue.png",
       "category": "edge-glow",
       "size_bytes": 7189
     },
     {
       "phase": 2,
       "concept": "edge_glow_orange_concept.png",
-      "production": "public/assets/rink/edge_glow/edge_glow_orange.png",
+      "production": "assets/fvsd-faceoff/rink/edge_glow/edge_glow_orange.png",
       "category": "edge-glow",
       "size_bytes": 7649
     },
     {
       "phase": 2,
       "concept": "edge_glow_teal_concept.png",
-      "production": "public/assets/rink/edge_glow/edge_glow_teal.png",
+      "production": "assets/fvsd-faceoff/rink/edge_glow/edge_glow_teal.png",
       "category": "edge-glow",
       "size_bytes": 6748
     },
     {
       "phase": 2,
       "concept": "edge_glow_white_concept.png",
-      "production": "public/assets/rink/edge_glow/edge_glow_white.png",
+      "production": "assets/fvsd-faceoff/rink/edge_glow/edge_glow_white.png",
       "category": "edge-glow",
       "size_bytes": 6782
     },
     {
       "phase": 2,
       "concept": "fence_overlay_concept.png",
-      "production": "public/assets/rink/props/fence_overlay.png",
+      "production": "assets/fvsd-faceoff/rink/props/fence_overlay.png",
       "category": "rink-prop",
       "size_bytes": 21214
     },
     {
       "phase": 2,
       "concept": "goal_light_concept.png",
-      "production": "public/assets/rink/props/goal_light.png",
+      "production": "assets/fvsd-faceoff/rink/props/goal_light.png",
       "category": "rink-prop",
       "size_bytes": 17225
     },
     {
       "phase": 2,
       "concept": "goal_net_concept.png",
-      "production": "public/assets/rink/props/goal_net.png",
+      "production": "assets/fvsd-faceoff/rink/props/goal_net.png",
       "category": "rink-prop",
       "size_bytes": 104753
     },
     {
       "phase": 2,
       "concept": "heavy_snow_buildup_concept.png",
-      "production": "public/assets/rink/details/heavy_snow_buildup.png",
+      "production": "assets/fvsd-faceoff/rink/details/heavy_snow_buildup.png",
       "category": "rink-detail",
       "size_bytes": 23677
     },
     {
       "phase": 2,
       "concept": "ice_gradient_centerfade_concept.png",
-      "production": "public/assets/rink/details/ice_gradient_centerfade.png",
+      "production": "assets/fvsd-faceoff/rink/details/ice_gradient_centerfade.png",
       "category": "rink-detail",
       "size_bytes": 37446
     },
     {
       "phase": 2,
       "concept": "ice_gradient_edgefade_concept.png",
-      "production": "public/assets/rink/details/ice_gradient_edgefade.png",
+      "production": "assets/fvsd-faceoff/rink/details/ice_gradient_edgefade.png",
       "category": "rink-detail",
       "size_bytes": 39342
     },
     {
       "phase": 2,
       "concept": "ice_gradient_sheen_concept.png",
-      "production": "public/assets/rink/details/ice_gradient_sheen.png",
+      "production": "assets/fvsd-faceoff/rink/details/ice_gradient_sheen.png",
       "category": "rink-detail",
       "size_bytes": 39706
     },
     {
       "phase": 2,
       "concept": "ice_scratches_overlay_concept.png",
-      "production": "public/assets/rink/details/ice_scratches_overlay.png",
+      "production": "assets/fvsd-faceoff/rink/details/ice_scratches_overlay.png",
       "category": "rink-detail",
       "size_bytes": 40157
     },
     {
       "phase": 2,
       "concept": "ice_shave_pile_concept.png",
-      "production": "public/assets/rink/props/ice_shave_pile.png",
+      "production": "assets/fvsd-faceoff/rink/props/ice_shave_pile.png",
       "category": "rink-prop",
       "size_bytes": 21683
     },
     {
       "phase": 2,
       "concept": "light_pole_concept.png",
-      "production": "public/assets/rink/props/light_pole.png",
+      "production": "assets/fvsd-faceoff/rink/props/light_pole.png",
       "category": "rink-prop",
       "size_bytes": 7670
     },
     {
       "phase": 2,
       "concept": "light_snow_buildup_concept.png",
-      "production": "public/assets/rink/details/light_snow_buildup.png",
+      "production": "assets/fvsd-faceoff/rink/details/light_snow_buildup.png",
       "category": "rink-detail",
       "size_bytes": 17608
     },
     {
       "phase": 2,
       "concept": "rink_boards_overlay_concept.png",
-      "production": "public/assets/rink/rink_boards_overlay.png",
+      "production": "assets/fvsd-faceoff/rink/rink_boards_overlay.png",
       "category": "rink-overlay",
       "size_bytes": 196860
     },
     {
       "phase": 2,
       "concept": "rink_fall_full_concept.jpg",
-      "production": "public/assets/rink/rink_fall_full.jpg",
+      "production": "assets/fvsd-faceoff/rink/rink_fall_full.jpg",
       "category": "rink-full",
       "size_bytes": 64595
     },
     {
       "phase": 2,
       "concept": "rink_markings_overlay_concept.png",
-      "production": "public/assets/rink/rink_markings_overlay.png",
+      "production": "assets/fvsd-faceoff/rink/rink_markings_overlay.png",
       "category": "rink-overlay",
       "size_bytes": 108857
     },
     {
       "phase": 2,
       "concept": "rink_spring_full_concept.jpg",
-      "production": "public/assets/rink/rink_spring_full.jpg",
+      "production": "assets/fvsd-faceoff/rink/rink_spring_full.jpg",
       "category": "rink-full",
       "size_bytes": 63042
     },
     {
       "phase": 2,
       "concept": "rink_winter_full_concept.jpg",
-      "production": "public/assets/rink/rink_winter_full.jpg",
+      "production": "assets/fvsd-faceoff/rink/rink_winter_full.jpg",
       "category": "rink-full",
       "size_bytes": 66127
     },
     {
       "phase": 2,
       "concept": "score_clock_concept.png",
-      "production": "public/assets/rink/props/score_clock.png",
+      "production": "assets/fvsd-faceoff/rink/props/score_clock.png",
       "category": "rink-prop",
       "size_bytes": 20956
     },
     {
       "phase": 2,
       "concept": "thaw_water_edge_concept.png",
-      "production": "public/assets/rink/details/thaw_water_edge.png",
+      "production": "assets/fvsd-faceoff/rink/details/thaw_water_edge.png",
       "category": "rink-detail",
       "size_bytes": 20264
     },
     {
       "phase": 2,
       "concept": "wet_reflections_overlay_concept.png",
-      "production": "public/assets/rink/details/wet_reflections_overlay.png",
+      "production": "assets/fvsd-faceoff/rink/details/wet_reflections_overlay.png",
       "category": "rink-detail",
       "size_bytes": 36497
     },
     {
       "phase": 3,
       "concept": "aurora_glow_background_concept.png",
-      "production": "public/assets/scoreboard/aurora_glow_background.png",
+      "production": "assets/fvsd-faceoff/scoreboard/aurora_glow_background.png",
       "category": "scoreboard",
       "size_bytes": 13116
     },
     {
       "phase": 3,
       "concept": "blue_glow_concept.png",
-      "production": "public/assets/scoreboard/glow/blue_glow.png",
+      "production": "assets/fvsd-faceoff/scoreboard/glow/blue_glow.png",
       "category": "scoreboard-glow",
       "size_bytes": 5007
     },
     {
       "phase": 3,
       "concept": "bottom_accent_lightstrip_concept.png",
-      "production": "public/assets/scoreboard/bottom_accent_lightstrip.png",
+      "production": "assets/fvsd-faceoff/scoreboard/bottom_accent_lightstrip.png",
       "category": "scoreboard",
       "size_bytes": 6614
     },
     {
       "phase": 3,
       "concept": "corner_accent_left_concept.png",
-      "production": "public/assets/scoreboard/corner_accent_left.png",
+      "production": "assets/fvsd-faceoff/scoreboard/corner_accent_left.png",
       "category": "scoreboard",
       "size_bytes": 9061
     },
     {
       "phase": 3,
       "concept": "corner_accent_right_concept.png",
-      "production": "public/assets/scoreboard/corner_accent_right.png",
+      "production": "assets/fvsd-faceoff/scoreboard/corner_accent_right.png",
       "category": "scoreboard",
       "size_bytes": 7176
     },
     {
       "phase": 3,
       "concept": "frosted_glass_overlay_concept.png",
-      "production": "public/assets/scoreboard/frosted_glass_overlay.png",
+      "production": "assets/fvsd-faceoff/scoreboard/frosted_glass_overlay.png",
       "category": "scoreboard",
       "size_bytes": 11616
     },
     {
       "phase": 3,
       "concept": "glass_inner_glow_panel_concept.png",
-      "production": "public/assets/scoreboard/glass_inner_glow_panel.png",
+      "production": "assets/fvsd-faceoff/scoreboard/glass_inner_glow_panel.png",
       "category": "scoreboard",
       "size_bytes": 16845
     },
     {
       "phase": 3,
       "concept": "glass_main_frame_concept.png",
-      "production": "public/assets/scoreboard/glass_main_frame.png",
+      "production": "assets/fvsd-faceoff/scoreboard/glass_main_frame.png",
       "category": "scoreboard",
       "size_bytes": 20982
     },
     {
       "phase": 3,
       "concept": "glass_metric_card_frame_concept.png",
-      "production": "public/assets/scoreboard/glass_metric_card_frame.png",
+      "production": "assets/fvsd-faceoff/scoreboard/glass_metric_card_frame.png",
       "category": "scoreboard",
       "size_bytes": 7844
     },
     {
       "phase": 3,
       "concept": "glass_panel_overlay_concept.png",
-      "production": "public/assets/scoreboard/glass_panel_overlay.png",
+      "production": "assets/fvsd-faceoff/scoreboard/glass_panel_overlay.png",
       "category": "scoreboard",
       "size_bytes": 11047
     },
     {
       "phase": 3,
       "concept": "glass_topbar_frame_concept.png",
-      "production": "public/assets/scoreboard/glass_topbar_frame.png",
+      "production": "assets/fvsd-faceoff/scoreboard/glass_topbar_frame.png",
       "category": "scoreboard",
       "size_bytes": 10911
     },
     {
       "phase": 3,
       "concept": "ice_scratch_overlay_concept.png",
-      "production": "public/assets/scoreboard/ice_scratch_overlay.png",
+      "production": "assets/fvsd-faceoff/scoreboard/ice_scratch_overlay.png",
       "category": "scoreboard",
       "size_bytes": 13751
     },
     {
       "phase": 3,
       "concept": "icon_ai_hours_concept.png",
-      "production": "public/assets/scoreboard/icons/icon_ai_hours.png",
+      "production": "assets/fvsd-faceoff/scoreboard/icons/icon_ai_hours.png",
       "category": "scoreboard-icon",
       "size_bytes": 385
     },
     {
       "phase": 3,
       "concept": "icon_prompts_concept.png",
-      "production": "public/assets/scoreboard/icons/icon_prompts.png",
+      "production": "assets/fvsd-faceoff/scoreboard/icons/icon_prompts.png",
       "category": "scoreboard-icon",
       "size_bytes": 414
     },
     {
       "phase": 3,
       "concept": "icon_users_concept.png",
-      "production": "public/assets/scoreboard/icons/icon_users.png",
+      "production": "assets/fvsd-faceoff/scoreboard/icons/icon_users.png",
       "category": "scoreboard-icon",
       "size_bytes": 406
     },
     {
       "phase": 3,
       "concept": "icon_xp_star_concept.png",
-      "production": "public/assets/scoreboard/icons/icon_xp_star.png",
+      "production": "assets/fvsd-faceoff/scoreboard/icons/icon_xp_star.png",
       "category": "scoreboard-icon",
       "size_bytes": 394
     },
     {
       "phase": 3,
       "concept": "orange_glow_concept.png",
-      "production": "public/assets/scoreboard/glow/orange_glow.png",
+      "production": "assets/fvsd-faceoff/scoreboard/glow/orange_glow.png",
       "category": "scoreboard-glow",
       "size_bytes": 4919
     },
     {
       "phase": 3,
       "concept": "purple_glow_concept.png",
-      "production": "public/assets/scoreboard/glow/purple_glow.png",
+      "production": "assets/fvsd-faceoff/scoreboard/glow/purple_glow.png",
       "category": "scoreboard-glow",
       "size_bytes": 5588
     },
     {
       "phase": 3,
       "concept": "rink_light_reflection_concept.png",
-      "production": "public/assets/scoreboard/rink_light_reflection.png",
+      "production": "assets/fvsd-faceoff/scoreboard/rink_light_reflection.png",
       "category": "scoreboard",
       "size_bytes": 7514
     },
     {
       "phase": 3,
       "concept": "scoreboard_desktop_layout_concept.png",
-      "production": "public/assets/scoreboard/layouts/scoreboard_desktop_layout.png",
+      "production": "assets/fvsd-faceoff/scoreboard/layouts/scoreboard_desktop_layout.png",
       "category": "scoreboard-layout",
       "size_bytes": 115518
     },
     {
       "phase": 3,
       "concept": "scoreboard_fall_theme_concept.png",
-      "production": "public/assets/scoreboard/themes/scoreboard_fall_theme.png",
+      "production": "assets/fvsd-faceoff/scoreboard/themes/scoreboard_fall_theme.png",
       "category": "scoreboard-theme",
       "size_bytes": 149979
     },
     {
       "phase": 3,
       "concept": "scoreboard_metric_card_concept.png",
-      "production": "public/assets/scoreboard/scoreboard_metric_card.png",
+      "production": "assets/fvsd-faceoff/scoreboard/scoreboard_metric_card.png",
       "category": "scoreboard",
       "size_bytes": 16689
     },
     {
       "phase": 3,
       "concept": "scoreboard_mobile_layout_concept.png",
-      "production": "public/assets/scoreboard/layouts/scoreboard_mobile_layout.png",
+      "production": "assets/fvsd-faceoff/scoreboard/layouts/scoreboard_mobile_layout.png",
       "category": "scoreboard-layout",
       "size_bytes": 69577
     },
     {
       "phase": 3,
       "concept": "scoreboard_primary_metric_panel_concept.png",
-      "production": "public/assets/scoreboard/scoreboard_primary_metric_panel.png",
+      "production": "assets/fvsd-faceoff/scoreboard/scoreboard_primary_metric_panel.png",
       "category": "scoreboard",
       "size_bytes": 26727
     },
     {
       "phase": 3,
       "concept": "scoreboard_progressbar_background_concept.png",
-      "production": "public/assets/scoreboard/scoreboard_progressbar_background.png",
+      "production": "assets/fvsd-faceoff/scoreboard/scoreboard_progressbar_background.png",
       "category": "scoreboard",
       "size_bytes": 16780
     },
     {
       "phase": 3,
       "concept": "scoreboard_progressbar_fill_concept.png",
-      "production": "public/assets/scoreboard/scoreboard_progressbar_fill.png",
+      "production": "assets/fvsd-faceoff/scoreboard/scoreboard_progressbar_fill.png",
       "category": "scoreboard",
       "size_bytes": 13071
     },
     {
       "phase": 3,
       "concept": "scoreboard_spring_theme_concept.png",
-      "production": "public/assets/scoreboard/themes/scoreboard_spring_theme.png",
+      "production": "assets/fvsd-faceoff/scoreboard/themes/scoreboard_spring_theme.png",
       "category": "scoreboard-theme",
       "size_bytes": 133115
     },
     {
       "phase": 3,
       "concept": "scoreboard_structure_breakdown_concept.png",
-      "production": "public/assets/scoreboard/scoreboard_structure_breakdown.png",
+      "production": "assets/fvsd-faceoff/scoreboard/scoreboard_structure_breakdown.png",
       "category": "scoreboard",
       "size_bytes": 282966
     },
     {
       "phase": 3,
       "concept": "scoreboard_tablet_layout_concept.png",
-      "production": "public/assets/scoreboard/layouts/scoreboard_tablet_layout.png",
+      "production": "assets/fvsd-faceoff/scoreboard/layouts/scoreboard_tablet_layout.png",
       "category": "scoreboard-layout",
       "size_bytes": 85126
     },
     {
       "phase": 3,
       "concept": "scoreboard_topbar_center_logo_concept.png",
-      "production": "public/assets/scoreboard/scoreboard_topbar_center_logo.png",
+      "production": "assets/fvsd-faceoff/scoreboard/scoreboard_topbar_center_logo.png",
       "category": "scoreboard",
       "size_bytes": 31206
     },
     {
       "phase": 3,
       "concept": "scoreboard_topbar_left_concept.png",
-      "production": "public/assets/scoreboard/scoreboard_topbar_left.png",
+      "production": "assets/fvsd-faceoff/scoreboard/scoreboard_topbar_left.png",
       "category": "scoreboard",
       "size_bytes": 23757
     },
     {
       "phase": 3,
       "concept": "scoreboard_topbar_right_concept.png",
-      "production": "public/assets/scoreboard/scoreboard_topbar_right.png",
+      "production": "assets/fvsd-faceoff/scoreboard/scoreboard_topbar_right.png",
       "category": "scoreboard",
       "size_bytes": 14974
     },
     {
       "phase": 3,
       "concept": "scoreboard_winter_theme_concept.png",
-      "production": "public/assets/scoreboard/themes/scoreboard_winter_theme.png",
+      "production": "assets/fvsd-faceoff/scoreboard/themes/scoreboard_winter_theme.png",
       "category": "scoreboard-theme",
       "size_bytes": 150864
     },
     {
       "phase": 3,
       "concept": "scoreboard_xp_card_concept.png",
-      "production": "public/assets/scoreboard/scoreboard_xp_card.png",
+      "production": "assets/fvsd-faceoff/scoreboard/scoreboard_xp_card.png",
       "category": "scoreboard",
       "size_bytes": 12273
     },
     {
       "phase": 3,
       "concept": "snow_particles_soft_concept.png",
-      "production": "public/assets/scoreboard/snow_particles_soft.png",
+      "production": "assets/fvsd-faceoff/scoreboard/snow_particles_soft.png",
       "category": "scoreboard",
       "size_bytes": 11458
     },
     {
       "phase": 3,
       "concept": "subtle_grid_overlay_concept.png",
-      "production": "public/assets/scoreboard/subtle_grid_overlay.png",
+      "production": "assets/fvsd-faceoff/scoreboard/subtle_grid_overlay.png",
       "category": "scoreboard",
       "size_bytes": 11895
     },
     {
       "phase": 3,
       "concept": "teal_glow_concept.png",
-      "production": "public/assets/scoreboard/glow/teal_glow.png",
+      "production": "assets/fvsd-faceoff/scoreboard/glow/teal_glow.png",
       "category": "scoreboard-glow",
       "size_bytes": 4275
     },
     {
       "phase": 4,
       "concept": "achievement_card_impact_leader_concept.png",
-      "production": "public/assets/badges/achievements/achievement_card_impact_leader.png",
+      "production": "assets/fvsd-faceoff/badges/achievements/achievement_card_impact_leader.png",
       "category": "achievement-card",
       "size_bytes": 31430
     },
     {
       "phase": 4,
       "concept": "achievement_card_innovator_concept.png",
-      "production": "public/assets/badges/achievements/achievement_card_innovator.png",
+      "production": "assets/fvsd-faceoff/badges/achievements/achievement_card_innovator.png",
       "category": "achievement-card",
       "size_bytes": 29168
     },
     {
       "phase": 4,
       "concept": "achievement_card_prompt_master_concept.png",
-      "production": "public/assets/badges/achievements/achievement_card_prompt_master.png",
+      "production": "assets/fvsd-faceoff/badges/achievements/achievement_card_prompt_master.png",
       "category": "achievement-card",
       "size_bytes": 28579
     },
     {
       "phase": 4,
       "concept": "badge_ai_explorer_concept.png",
-      "production": "public/assets/badges/badges/badge_ai_explorer.png",
+      "production": "assets/fvsd-faceoff/badges/badges/badge_ai_explorer.png",
       "category": "badge",
       "size_bytes": 13175
     },
     {
       "phase": 4,
       "concept": "badge_classroom_champion_concept.png",
-      "production": "public/assets/badges/badges/badge_classroom_champion.png",
+      "production": "assets/fvsd-faceoff/badges/badges/badge_classroom_champion.png",
       "category": "badge",
       "size_bytes": 8862
     },
     {
       "phase": 4,
       "concept": "badge_collaborator_concept.png",
-      "production": "public/assets/badges/badges/badge_collaborator.png",
+      "production": "assets/fvsd-faceoff/badges/badges/badge_collaborator.png",
       "category": "badge",
       "size_bytes": 11530
     },
     {
       "phase": 4,
       "concept": "badge_collection_progress_concept.png",
-      "production": "public/assets/badges/badges/badge_collection_progress.png",
+      "production": "assets/fvsd-faceoff/badges/badges/badge_collection_progress.png",
       "category": "badge",
       "size_bytes": 35989
     },
     {
       "phase": 4,
       "concept": "badge_data_defender_concept.png",
-      "production": "public/assets/badges/badges/badge_data_defender.png",
+      "production": "assets/fvsd-faceoff/badges/badges/badge_data_defender.png",
       "category": "badge",
       "size_bytes": 11829
     },
     {
       "phase": 4,
       "concept": "badge_innovator_concept.png",
-      "production": "public/assets/badges/badges/badge_innovator.png",
+      "production": "assets/fvsd-faceoff/badges/badges/badge_innovator.png",
       "category": "badge",
       "size_bytes": 11578
     },
     {
       "phase": 4,
       "concept": "badge_prompt_master_concept.png",
-      "production": "public/assets/badges/badges/badge_prompt_master.png",
+      "production": "assets/fvsd-faceoff/badges/badges/badge_prompt_master.png",
       "category": "badge",
       "size_bytes": 11687
     },
     {
       "phase": 4,
       "concept": "badge_tier_bronze_concept.png",
-      "production": "public/assets/badges/tiers/badge_tier_bronze.png",
+      "production": "assets/fvsd-faceoff/badges/tiers/badge_tier_bronze.png",
       "category": "badge-tier",
       "size_bytes": 16192
     },
     {
       "phase": 4,
       "concept": "badge_tier_diamond_concept.png",
-      "production": "public/assets/badges/tiers/badge_tier_diamond.png",
+      "production": "assets/fvsd-faceoff/badges/tiers/badge_tier_diamond.png",
       "category": "badge-tier",
       "size_bytes": 19181
     },
     {
       "phase": 4,
       "concept": "badge_tier_gold_concept.png",
-      "production": "public/assets/badges/tiers/badge_tier_gold.png",
+      "production": "assets/fvsd-faceoff/badges/tiers/badge_tier_gold.png",
       "category": "badge-tier",
       "size_bytes": 17360
     },
     {
       "phase": 4,
       "concept": "badge_tier_legendary_concept.png",
-      "production": "public/assets/badges/tiers/badge_tier_legendary.png",
+      "production": "assets/fvsd-faceoff/badges/tiers/badge_tier_legendary.png",
       "category": "badge-tier",
       "size_bytes": 14720
     },
     {
       "phase": 4,
       "concept": "badge_tier_platinum_concept.png",
-      "production": "public/assets/badges/tiers/badge_tier_platinum.png",
+      "production": "assets/fvsd-faceoff/badges/tiers/badge_tier_platinum.png",
       "category": "badge-tier",
       "size_bytes": 18102
     },
     {
       "phase": 4,
       "concept": "badge_tier_silver_concept.png",
-      "production": "public/assets/badges/tiers/badge_tier_silver.png",
+      "production": "assets/fvsd-faceoff/badges/tiers/badge_tier_silver.png",
       "category": "badge-tier",
       "size_bytes": 16799
     },
     {
       "phase": 4,
       "concept": "category_progress_concept.png",
-      "production": "public/assets/badges/category_progress.png",
+      "production": "assets/fvsd-faceoff/badges/category_progress.png",
       "category": "badge-misc",
       "size_bytes": 37670
     },
     {
       "phase": 4,
       "concept": "confetti_overlay_concept.png",
-      "production": "public/assets/badges/confetti_overlay.png",
+      "production": "assets/fvsd-faceoff/badges/confetti_overlay.png",
       "category": "badge-misc",
       "size_bytes": 29917
     },
     {
       "phase": 4,
       "concept": "energy_streak_gold_concept.png",
-      "production": "public/assets/badges/fx/energy_streak_gold.png",
+      "production": "assets/fvsd-faceoff/badges/fx/energy_streak_gold.png",
       "category": "fx",
       "size_bytes": 3985
     },
     {
       "phase": 4,
       "concept": "energy_streak_purple_concept.png",
-      "production": "public/assets/badges/fx/energy_streak_purple.png",
+      "production": "assets/fvsd-faceoff/badges/fx/energy_streak_purple.png",
       "category": "fx",
       "size_bytes": 4084
     },
     {
       "phase": 4,
       "concept": "energy_streak_teal_concept.png",
-      "production": "public/assets/badges/fx/energy_streak_teal.png",
+      "production": "assets/fvsd-faceoff/badges/fx/energy_streak_teal.png",
       "category": "fx",
       "size_bytes": 4538
     },
     {
       "phase": 4,
       "concept": "event_badge_fall_challenge_concept.png",
-      "production": "public/assets/badges/events/event_badge_fall_challenge.png",
+      "production": "assets/fvsd-faceoff/badges/events/event_badge_fall_challenge.png",
       "category": "event-badge",
       "size_bytes": 25304
     },
     {
       "phase": 4,
       "concept": "event_badge_spring_challenge_concept.png",
-      "production": "public/assets/badges/events/event_badge_spring_challenge.png",
+      "production": "assets/fvsd-faceoff/badges/events/event_badge_spring_challenge.png",
       "category": "event-badge",
       "size_bytes": 28412
     },
     {
       "phase": 4,
       "concept": "event_badge_winter_challenge_concept.png",
-      "production": "public/assets/badges/events/event_badge_winter_challenge.png",
+      "production": "assets/fvsd-faceoff/badges/events/event_badge_winter_challenge.png",
       "category": "event-badge",
       "size_bytes": 27256
     },
     {
       "phase": 4,
       "concept": "frame_unlocks_set_concept.png",
-      "production": "public/assets/badges/frame_unlocks_set.png",
+      "production": "assets/fvsd-faceoff/badges/frame_unlocks_set.png",
       "category": "badge-misc",
       "size_bytes": 33142
     },
     {
       "phase": 4,
       "concept": "glow_burst_blue_concept.png",
-      "production": "public/assets/badges/fx/glow_burst_blue.png",
+      "production": "assets/fvsd-faceoff/badges/fx/glow_burst_blue.png",
       "category": "fx",
       "size_bytes": 6444
     },
     {
       "phase": 4,
       "concept": "glow_burst_gold_concept.png",
-      "production": "public/assets/badges/fx/glow_burst_gold.png",
+      "production": "assets/fvsd-faceoff/badges/fx/glow_burst_gold.png",
       "category": "fx",
       "size_bytes": 8150
     },
     {
       "phase": 4,
       "concept": "glow_burst_purple_concept.png",
-      "production": "public/assets/badges/fx/glow_burst_purple.png",
+      "production": "assets/fvsd-faceoff/badges/fx/glow_burst_purple.png",
       "category": "fx",
       "size_bytes": 7618
     },
     {
       "phase": 4,
       "concept": "glow_burst_teal_concept.png",
-      "production": "public/assets/badges/fx/glow_burst_teal.png",
+      "production": "assets/fvsd-faceoff/badges/fx/glow_burst_teal.png",
       "category": "fx",
       "size_bytes": 8054
     },
     {
       "phase": 4,
       "concept": "leaderboard_podium_top3_concept.png",
-      "production": "public/assets/badges/leaderboard_podium_top3.png",
+      "production": "assets/fvsd-faceoff/badges/leaderboard_podium_top3.png",
       "category": "badge-misc",
       "size_bytes": 91457
     },
     {
       "phase": 4,
       "concept": "level_badge_25_concept.png",
-      "production": "public/assets/badges/indicators/level_badge_25.png",
+      "production": "assets/fvsd-faceoff/badges/indicators/level_badge_25.png",
       "category": "indicator",
       "size_bytes": 23709
     },
     {
       "phase": 4,
       "concept": "light_beams_set_concept.png",
-      "production": "public/assets/badges/fx/light_beams_set.png",
+      "production": "assets/fvsd-faceoff/badges/fx/light_beams_set.png",
       "category": "fx",
       "size_bytes": 28507
     },
     {
       "phase": 4,
       "concept": "milestone_100k_points_concept.png",
-      "production": "public/assets/badges/milestones/milestone_100k_points.png",
+      "production": "assets/fvsd-faceoff/badges/milestones/milestone_100k_points.png",
       "category": "milestone",
       "size_bytes": 19127
     },
     {
       "phase": 4,
       "concept": "milestone_10k_points_concept.png",
-      "production": "public/assets/badges/milestones/milestone_10k_points.png",
+      "production": "assets/fvsd-faceoff/badges/milestones/milestone_10k_points.png",
       "category": "milestone",
       "size_bytes": 18859
     },
     {
       "phase": 4,
       "concept": "milestone_1k_points_concept.png",
-      "production": "public/assets/badges/milestones/milestone_1k_points.png",
+      "production": "assets/fvsd-faceoff/badges/milestones/milestone_1k_points.png",
       "category": "milestone",
       "size_bytes": 17722
     },
     {
       "phase": 4,
       "concept": "milestone_250k_points_concept.png",
-      "production": "public/assets/badges/milestones/milestone_250k_points.png",
+      "production": "assets/fvsd-faceoff/badges/milestones/milestone_250k_points.png",
       "category": "milestone",
       "size_bytes": 20620
     },
     {
       "phase": 4,
       "concept": "milestone_50k_points_concept.png",
-      "production": "public/assets/badges/milestones/milestone_50k_points.png",
+      "production": "assets/fvsd-faceoff/badges/milestones/milestone_50k_points.png",
       "category": "milestone",
       "size_bytes": 19669
     },
     {
       "phase": 4,
       "concept": "particle_swirl_blue_concept.png",
-      "production": "public/assets/badges/fx/particle_swirl_blue.png",
+      "production": "assets/fvsd-faceoff/badges/fx/particle_swirl_blue.png",
       "category": "fx",
       "size_bytes": 7632
     },
     {
       "phase": 4,
       "concept": "particle_swirl_gold_concept.png",
-      "production": "public/assets/badges/fx/particle_swirl_gold.png",
+      "production": "assets/fvsd-faceoff/badges/fx/particle_swirl_gold.png",
       "category": "fx",
       "size_bytes": 7949
     },
     {
       "phase": 4,
       "concept": "particle_swirl_purple_concept.png",
-      "production": "public/assets/badges/fx/particle_swirl_purple.png",
+      "production": "assets/fvsd-faceoff/badges/fx/particle_swirl_purple.png",
       "category": "fx",
       "size_bytes": 7970
     },
     {
       "phase": 4,
       "concept": "particle_swirl_teal_concept.png",
-      "production": "public/assets/badges/fx/particle_swirl_teal.png",
+      "production": "assets/fvsd-faceoff/badges/fx/particle_swirl_teal.png",
       "category": "fx",
       "size_bytes": 6464
     },
     {
       "phase": 4,
       "concept": "streak_indicator_14_concept.png",
-      "production": "public/assets/badges/indicators/streak_indicator_14.png",
+      "production": "assets/fvsd-faceoff/badges/indicators/streak_indicator_14.png",
       "category": "indicator",
       "size_bytes": 19201
     },
     {
       "phase": 4,
       "concept": "theme_unlocks_set_concept.png",
-      "production": "public/assets/badges/theme_unlocks_set.png",
+      "production": "assets/fvsd-faceoff/badges/theme_unlocks_set.png",
       "category": "badge-misc",
       "size_bytes": 53041
     },
     {
       "phase": 4,
       "concept": "toast_achievement_unlocked_concept.png",
-      "production": "public/assets/badges/toasts/toast_achievement_unlocked.png",
+      "production": "assets/fvsd-faceoff/badges/toasts/toast_achievement_unlocked.png",
       "category": "toast",
       "size_bytes": 25310
     },
     {
       "phase": 4,
       "concept": "toast_level_up_concept.png",
-      "production": "public/assets/badges/toasts/toast_level_up.png",
+      "production": "assets/fvsd-faceoff/badges/toasts/toast_level_up.png",
       "category": "toast",
       "size_bytes": 19479
     },
     {
       "phase": 4,
       "concept": "toast_milestone_reached_concept.png",
-      "production": "public/assets/badges/toasts/toast_milestone_reached.png",
+      "production": "assets/fvsd-faceoff/badges/toasts/toast_milestone_reached.png",
       "category": "toast",
       "size_bytes": 23638
     },
     {
       "phase": 4,
       "concept": "trophy_awards_set_concept.png",
-      "production": "public/assets/badges/trophy_awards_set.png",
+      "production": "assets/fvsd-faceoff/badges/trophy_awards_set.png",
       "category": "badge-misc",
       "size_bytes": 38419
     },
     {
       "phase": 4,
       "concept": "xp_progress_bar_concept.png",
-      "production": "public/assets/badges/xp_progress_bar.png",
+      "production": "assets/fvsd-faceoff/badges/xp_progress_bar.png",
       "category": "badge-misc",
       "size_bytes": 37461
     },
     {
       "phase": 5,
       "concept": "avatar_styles_concept.png",
-      "production": "public/assets/ui/cards/avatar_styles.png",
+      "production": "assets/fvsd-faceoff/ui/cards/avatar_styles.png",
       "category": "card",
       "size_bytes": 13200
     },
     {
       "phase": 5,
       "concept": "bokeh_glow_concept.png",
-      "production": "public/assets/ui/decoration/bokeh_glow.png",
+      "production": "assets/fvsd-faceoff/ui/decoration/bokeh_glow.png",
       "category": "decoration",
       "size_bytes": 3976
     },
     {
       "phase": 5,
       "concept": "button_danger_concept.png",
-      "production": "public/assets/ui/buttons/button_danger.png",
+      "production": "assets/fvsd-faceoff/ui/buttons/button_danger.png",
       "category": "button",
       "size_bytes": 6509
     },
     {
       "phase": 5,
       "concept": "button_ghost_concept.png",
-      "production": "public/assets/ui/buttons/button_ghost.png",
+      "production": "assets/fvsd-faceoff/ui/buttons/button_ghost.png",
       "category": "button",
       "size_bytes": 5568
     },
     {
       "phase": 5,
       "concept": "button_primary_concept.png",
-      "production": "public/assets/ui/buttons/button_primary.png",
+      "production": "assets/fvsd-faceoff/ui/buttons/button_primary.png",
       "category": "button",
       "size_bytes": 6939
     },
     {
       "phase": 5,
       "concept": "button_secondary_concept.png",
-      "production": "public/assets/ui/buttons/button_secondary.png",
+      "production": "assets/fvsd-faceoff/ui/buttons/button_secondary.png",
       "category": "button",
       "size_bytes": 7330
     },
     {
       "phase": 5,
       "concept": "button_state_default_concept.png",
-      "production": "public/assets/ui/buttons/button_state_default.png",
+      "production": "assets/fvsd-faceoff/ui/buttons/button_state_default.png",
       "category": "button",
       "size_bytes": 3642
     },
     {
       "phase": 5,
       "concept": "button_state_disabled_concept.png",
-      "production": "public/assets/ui/buttons/button_state_disabled.png",
+      "production": "assets/fvsd-faceoff/ui/buttons/button_state_disabled.png",
       "category": "button",
       "size_bytes": 3300
     },
     {
       "phase": 5,
       "concept": "button_state_hover_concept.png",
-      "production": "public/assets/ui/buttons/button_state_hover.png",
+      "production": "assets/fvsd-faceoff/ui/buttons/button_state_hover.png",
       "category": "button",
       "size_bytes": 3827
     },
     {
       "phase": 5,
       "concept": "button_state_pressed_concept.png",
-      "production": "public/assets/ui/buttons/button_state_pressed.png",
+      "production": "assets/fvsd-faceoff/ui/buttons/button_state_pressed.png",
       "category": "button",
       "size_bytes": 3713
     },
     {
       "phase": 5,
       "concept": "chart_bar_concept.png",
-      "production": "public/assets/ui/charts/chart_bar.png",
+      "production": "assets/fvsd-faceoff/ui/charts/chart_bar.png",
       "category": "chart",
       "size_bytes": 27497
     },
     {
       "phase": 5,
       "concept": "chart_donut_concept.png",
-      "production": "public/assets/ui/charts/chart_donut.png",
+      "production": "assets/fvsd-faceoff/ui/charts/chart_donut.png",
       "category": "chart",
       "size_bytes": 23507
     },
     {
       "phase": 5,
       "concept": "chart_line_concept.png",
-      "production": "public/assets/ui/charts/chart_line.png",
+      "production": "assets/fvsd-faceoff/ui/charts/chart_line.png",
       "category": "chart",
       "size_bytes": 25506
     },
     {
       "phase": 5,
       "concept": "chart_radar_concept.png",
-      "production": "public/assets/ui/charts/chart_radar.png",
+      "production": "assets/fvsd-faceoff/ui/charts/chart_radar.png",
       "category": "chart",
       "size_bytes": 22685
     },
     {
       "phase": 5,
       "concept": "checkbox_checked_concept.png",
-      "production": "public/assets/ui/inputs/checkbox_checked.png",
+      "production": "assets/fvsd-faceoff/ui/inputs/checkbox_checked.png",
       "category": "input",
       "size_bytes": 2718
     },
     {
       "phase": 5,
       "concept": "checkbox_disabled_concept.png",
-      "production": "public/assets/ui/inputs/checkbox_disabled.png",
+      "production": "assets/fvsd-faceoff/ui/inputs/checkbox_disabled.png",
       "category": "input",
       "size_bytes": 1404
     },
     {
       "phase": 5,
       "concept": "checkbox_unchecked_concept.png",
-      "production": "public/assets/ui/inputs/checkbox_unchecked.png",
+      "production": "assets/fvsd-faceoff/ui/inputs/checkbox_unchecked.png",
       "category": "input",
       "size_bytes": 2320
     },
     {
       "phase": 5,
       "concept": "circular_progress_concept.png",
-      "production": "public/assets/ui/loading/circular_progress.png",
+      "production": "assets/fvsd-faceoff/ui/loading/circular_progress.png",
       "category": "loading",
       "size_bytes": 10937
     },
     {
       "phase": 5,
       "concept": "dropdown_open_menu_concept.png",
-      "production": "public/assets/ui/inputs/dropdown_open_menu.png",
+      "production": "assets/fvsd-faceoff/ui/inputs/dropdown_open_menu.png",
       "category": "input",
       "size_bytes": 17948
     },
     {
       "phase": 5,
       "concept": "dropdown_select_concept.png",
-      "production": "public/assets/ui/inputs/dropdown_select.png",
+      "production": "assets/fvsd-faceoff/ui/inputs/dropdown_select.png",
       "category": "input",
       "size_bytes": 7370
     },
     {
       "phase": 5,
       "concept": "elevated_card_streak_concept.png",
-      "production": "public/assets/ui/cards/elevated_card_streak.png",
+      "production": "assets/fvsd-faceoff/ui/cards/elevated_card_streak.png",
       "category": "card",
       "size_bytes": 21825
     },
     {
       "phase": 5,
       "concept": "glass_background_concept.png",
-      "production": "public/assets/ui/decoration/glass_background.png",
+      "production": "assets/fvsd-faceoff/ui/decoration/glass_background.png",
       "category": "decoration",
       "size_bytes": 6583
     },
     {
       "phase": 5,
       "concept": "glass_card_chart_concept.png",
-      "production": "public/assets/ui/decoration/glass_card_chart.png",
+      "production": "assets/fvsd-faceoff/ui/decoration/glass_card_chart.png",
       "category": "decoration",
       "size_bytes": 29505
     },
     {
       "phase": 5,
       "concept": "grid_overlay_concept.png",
-      "production": "public/assets/ui/decoration/grid_overlay.png",
+      "production": "assets/fvsd-faceoff/ui/decoration/grid_overlay.png",
       "category": "decoration",
       "size_bytes": 3591
     },
     {
       "phase": 5,
       "concept": "iconset_navigation_concept.png",
-      "production": "public/assets/ui/navigation/iconset_navigation.png",
+      "production": "assets/fvsd-faceoff/ui/navigation/iconset_navigation.png",
       "category": "navigation",
       "size_bytes": 11935
     },
     {
       "phase": 5,
       "concept": "info_panel_status_concept.png",
-      "production": "public/assets/ui/cards/info_panel_status.png",
+      "production": "assets/fvsd-faceoff/ui/cards/info_panel_status.png",
       "category": "card",
       "size_bytes": 19065
     },
     {
       "phase": 5,
       "concept": "input_text_default_concept.png",
-      "production": "public/assets/ui/inputs/input_text_default.png",
+      "production": "assets/fvsd-faceoff/ui/inputs/input_text_default.png",
       "category": "input",
       "size_bytes": 6138
     },
     {
       "phase": 5,
       "concept": "input_text_focused_concept.png",
-      "production": "public/assets/ui/inputs/input_text_focused.png",
+      "production": "assets/fvsd-faceoff/ui/inputs/input_text_focused.png",
       "category": "input",
       "size_bytes": 6829
     },
     {
       "phase": 5,
       "concept": "light_leak_concept.png",
-      "production": "public/assets/ui/decoration/light_leak.png",
+      "production": "assets/fvsd-faceoff/ui/decoration/light_leak.png",
       "category": "decoration",
       "size_bytes": 7027
     },
     {
       "phase": 5,
       "concept": "linear_progress_concept.png",
-      "production": "public/assets/ui/loading/linear_progress.png",
+      "production": "assets/fvsd-faceoff/ui/loading/linear_progress.png",
       "category": "loading",
       "size_bytes": 5606
     },
     {
       "phase": 5,
       "concept": "micro_favorite_on_concept.png",
-      "production": "public/assets/ui/micro/micro_favorite_on.png",
+      "production": "assets/fvsd-faceoff/ui/micro/micro_favorite_on.png",
       "category": "micro-interaction",
       "size_bytes": 1126
     },
     {
       "phase": 5,
       "concept": "micro_hover_glow_concept.png",
-      "production": "public/assets/ui/micro/micro_hover_glow.png",
+      "production": "assets/fvsd-faceoff/ui/micro/micro_hover_glow.png",
       "category": "micro-interaction",
       "size_bytes": 1131
     },
     {
       "phase": 5,
       "concept": "micro_notification_bell_concept.png",
-      "production": "public/assets/ui/micro/micro_notification_bell.png",
+      "production": "assets/fvsd-faceoff/ui/micro/micro_notification_bell.png",
       "category": "micro-interaction",
       "size_bytes": 1060
     },
     {
       "phase": 5,
       "concept": "micro_pressed_scale_concept.png",
-      "production": "public/assets/ui/micro/micro_pressed_scale.png",
+      "production": "assets/fvsd-faceoff/ui/micro/micro_pressed_scale.png",
       "category": "micro-interaction",
       "size_bytes": 1096
     },
     {
       "phase": 5,
       "concept": "micro_pull_refresh_concept.png",
-      "production": "public/assets/ui/micro/micro_pull_refresh.png",
+      "production": "assets/fvsd-faceoff/ui/micro/micro_pull_refresh.png",
       "category": "micro-interaction",
       "size_bytes": 1060
     },
     {
       "phase": 5,
       "concept": "micro_success_check_concept.png",
-      "production": "public/assets/ui/micro/micro_success_check.png",
+      "production": "assets/fvsd-faceoff/ui/micro/micro_success_check.png",
       "category": "micro-interaction",
       "size_bytes": 1145
     },
     {
       "phase": 5,
       "concept": "modal_achievement_unlocked_concept.png",
-      "production": "public/assets/ui/modals/modal_achievement_unlocked.png",
+      "production": "assets/fvsd-faceoff/ui/modals/modal_achievement_unlocked.png",
       "category": "modal",
       "size_bytes": 44705
     },
     {
       "phase": 5,
       "concept": "modal_confirmation_concept.png",
-      "production": "public/assets/ui/modals/modal_confirmation.png",
+      "production": "assets/fvsd-faceoff/ui/modals/modal_confirmation.png",
       "category": "modal",
       "size_bytes": 32806
     },
     {
       "phase": 5,
       "concept": "modal_information_concept.png",
-      "production": "public/assets/ui/modals/modal_information.png",
+      "production": "assets/fvsd-faceoff/ui/modals/modal_information.png",
       "category": "modal",
       "size_bytes": 31769
     },
     {
       "phase": 5,
       "concept": "notification_error_concept.png",
-      "production": "public/assets/ui/feedback/notification_error.png",
+      "production": "assets/fvsd-faceoff/ui/feedback/notification_error.png",
       "category": "feedback",
       "size_bytes": 12882
     },
     {
       "phase": 5,
       "concept": "notification_info_concept.png",
-      "production": "public/assets/ui/feedback/notification_info.png",
+      "production": "assets/fvsd-faceoff/ui/feedback/notification_info.png",
       "category": "feedback",
       "size_bytes": 16325
     },
     {
       "phase": 5,
       "concept": "notification_success_concept.png",
-      "production": "public/assets/ui/feedback/notification_success.png",
+      "production": "assets/fvsd-faceoff/ui/feedback/notification_success.png",
       "category": "feedback",
       "size_bytes": 14589
     },
     {
       "phase": 5,
       "concept": "notification_warning_concept.png",
-      "production": "public/assets/ui/feedback/notification_warning.png",
+      "production": "assets/fvsd-faceoff/ui/feedback/notification_warning.png",
       "category": "feedback",
       "size_bytes": 15224
     },
     {
       "phase": 5,
       "concept": "outlined_card_winrate_concept.png",
-      "production": "public/assets/ui/cards/outlined_card_winrate.png",
+      "production": "assets/fvsd-faceoff/ui/cards/outlined_card_winrate.png",
       "category": "card",
       "size_bytes": 20378
     },
     {
       "phase": 5,
       "concept": "particle_float_concept.png",
-      "production": "public/assets/ui/decoration/particle_float.png",
+      "production": "assets/fvsd-faceoff/ui/decoration/particle_float.png",
       "category": "decoration",
       "size_bytes": 7022
     },
     {
       "phase": 5,
       "concept": "popover_menu_concept.png",
-      "production": "public/assets/ui/feedback/popover_menu.png",
+      "production": "assets/fvsd-faceoff/ui/feedback/popover_menu.png",
       "category": "feedback",
       "size_bytes": 21348
     },
     {
       "phase": 5,
       "concept": "pulse_loading_concept.png",
-      "production": "public/assets/ui/loading/pulse_loading.png",
+      "production": "assets/fvsd-faceoff/ui/loading/pulse_loading.png",
       "category": "loading",
       "size_bytes": 4845
     },
     {
       "phase": 5,
       "concept": "search_input_concept.png",
-      "production": "public/assets/ui/inputs/search_input.png",
+      "production": "assets/fvsd-faceoff/ui/inputs/search_input.png",
       "category": "input",
       "size_bytes": 6086
     },
     {
       "phase": 5,
       "concept": "segmented_control_concept.png",
-      "production": "public/assets/ui/inputs/segmented_control.png",
+      "production": "assets/fvsd-faceoff/ui/inputs/segmented_control.png",
       "category": "input",
       "size_bytes": 4056
     },
     {
       "phase": 5,
       "concept": "skeleton_loading_concept.png",
-      "production": "public/assets/ui/loading/skeleton_loading.png",
+      "production": "assets/fvsd-faceoff/ui/loading/skeleton_loading.png",
       "category": "loading",
       "size_bytes": 24751
     },
     {
       "phase": 5,
       "concept": "slider_blue_concept.png",
-      "production": "public/assets/ui/inputs/slider_blue.png",
+      "production": "assets/fvsd-faceoff/ui/inputs/slider_blue.png",
       "category": "input",
       "size_bytes": 5095
     },
     {
       "phase": 5,
       "concept": "slider_orange_concept.png",
-      "production": "public/assets/ui/inputs/slider_orange.png",
+      "production": "assets/fvsd-faceoff/ui/inputs/slider_orange.png",
       "category": "input",
       "size_bytes": 3788
     },
     {
       "phase": 5,
       "concept": "slider_teal_concept.png",
-      "production": "public/assets/ui/inputs/slider_teal.png",
+      "production": "assets/fvsd-faceoff/ui/inputs/slider_teal.png",
       "category": "input",
       "size_bytes": 4266
     },
     {
       "phase": 5,
       "concept": "spinner_loading_concept.png",
-      "production": "public/assets/ui/loading/spinner_loading.png",
+      "production": "assets/fvsd-faceoff/ui/loading/spinner_loading.png",
       "category": "loading",
       "size_bytes": 6226
     },
     {
       "phase": 5,
       "concept": "status_indicators_concept.png",
-      "production": "public/assets/ui/cards/status_indicators.png",
+      "production": "assets/fvsd-faceoff/ui/cards/status_indicators.png",
       "category": "card",
       "size_bytes": 9026
     },
     {
       "phase": 5,
       "concept": "step_progress_concept.png",
-      "production": "public/assets/ui/loading/step_progress.png",
+      "production": "assets/fvsd-faceoff/ui/loading/step_progress.png",
       "category": "loading",
       "size_bytes": 17973
     },
     {
       "phase": 5,
       "concept": "tabs_navigation_concept.png",
-      "production": "public/assets/ui/navigation/tabs_navigation.png",
+      "production": "assets/fvsd-faceoff/ui/navigation/tabs_navigation.png",
       "category": "navigation",
       "size_bytes": 10236
     },
     {
       "phase": 5,
       "concept": "toggle_disabled_concept.png",
-      "production": "public/assets/ui/inputs/toggle_disabled.png",
+      "production": "assets/fvsd-faceoff/ui/inputs/toggle_disabled.png",
       "category": "input",
       "size_bytes": 1822
     },
     {
       "phase": 5,
       "concept": "toggle_off_concept.png",
-      "production": "public/assets/ui/inputs/toggle_off.png",
+      "production": "assets/fvsd-faceoff/ui/inputs/toggle_off.png",
       "category": "input",
       "size_bytes": 3001
     },
     {
       "phase": 5,
       "concept": "toggle_on_concept.png",
-      "production": "public/assets/ui/inputs/toggle_on.png",
+      "production": "assets/fvsd-faceoff/ui/inputs/toggle_on.png",
       "category": "input",
       "size_bytes": 3355
     },
     {
       "phase": 5,
       "concept": "tooltip_concept.png",
-      "production": "public/assets/ui/feedback/tooltip.png",
+      "production": "assets/fvsd-faceoff/ui/feedback/tooltip.png",
       "category": "feedback",
       "size_bytes": 27076
     },
     {
       "phase": 5,
       "concept": "top_navigation_bar_concept.png",
-      "production": "public/assets/ui/navigation/top_navigation_bar.png",
+      "production": "assets/fvsd-faceoff/ui/navigation/top_navigation_bar.png",
       "category": "navigation",
       "size_bytes": 68013
     },
     {
       "phase": 5,
       "concept": "user_badges_concept.png",
-      "production": "public/assets/ui/cards/user_badges.png",
+      "production": "assets/fvsd-faceoff/ui/cards/user_badges.png",
       "category": "card",
       "size_bytes": 18431
     },
     {
       "phase": 5,
       "concept": "vignette_overlay_concept.png",
-      "production": "public/assets/ui/decoration/vignette_overlay.png",
+      "production": "assets/fvsd-faceoff/ui/decoration/vignette_overlay.png",
       "category": "decoration",
       "size_bytes": 6447
     },
@@ -1432,72 +1432,72 @@
   },
   "library_bindings": [
     {
-      "expected_by_library": "public/assets/backgrounds/fall_background_4k.webp",
-      "current_staged_file": "public/assets/backgrounds/fall_background_4k.jpg",
+      "expected_by_library": "assets/fvsd-faceoff/backgrounds/fall_background_4k.webp",
+      "current_staged_file": "assets/fvsd-faceoff/backgrounds/fall_background_4k.jpg",
       "matches": false,
       "exists": true,
       "needs_webp_conversion": true,
       "needs_rename": true
     },
     {
-      "expected_by_library": "public/assets/backgrounds/winter_background_4k.webp",
-      "current_staged_file": "public/assets/backgrounds/winter_background_4k.jpg",
+      "expected_by_library": "assets/fvsd-faceoff/backgrounds/winter_background_4k.webp",
+      "current_staged_file": "assets/fvsd-faceoff/backgrounds/winter_background_4k.jpg",
       "matches": false,
       "exists": true,
       "needs_webp_conversion": true,
       "needs_rename": true
     },
     {
-      "expected_by_library": "public/assets/backgrounds/spring_background_4k.webp",
-      "current_staged_file": "public/assets/backgrounds/spring_background_4k.jpg",
+      "expected_by_library": "assets/fvsd-faceoff/backgrounds/spring_background_4k.webp",
+      "current_staged_file": "assets/fvsd-faceoff/backgrounds/spring_background_4k.jpg",
       "matches": false,
       "exists": true,
       "needs_webp_conversion": true,
       "needs_rename": true
     },
     {
-      "expected_by_library": "public/assets/rink/rink_fall.webp",
-      "current_staged_file": "public/assets/rink/rink_fall_full.jpg",
+      "expected_by_library": "assets/fvsd-faceoff/rink/rink_fall.webp",
+      "current_staged_file": "assets/fvsd-faceoff/rink/rink_fall_full.jpg",
       "matches": false,
       "exists": true,
       "needs_webp_conversion": true,
       "needs_rename": true
     },
     {
-      "expected_by_library": "public/assets/rink/rink_winter.webp",
-      "current_staged_file": "public/assets/rink/rink_winter_full.jpg",
+      "expected_by_library": "assets/fvsd-faceoff/rink/rink_winter.webp",
+      "current_staged_file": "assets/fvsd-faceoff/rink/rink_winter_full.jpg",
       "matches": false,
       "exists": true,
       "needs_webp_conversion": true,
       "needs_rename": true
     },
     {
-      "expected_by_library": "public/assets/rink/rink_spring.webp",
-      "current_staged_file": "public/assets/rink/rink_spring_full.jpg",
+      "expected_by_library": "assets/fvsd-faceoff/rink/rink_spring.webp",
+      "current_staged_file": "assets/fvsd-faceoff/rink/rink_spring_full.jpg",
       "matches": false,
       "exists": true,
       "needs_webp_conversion": true,
       "needs_rename": true
     },
     {
-      "expected_by_library": "public/assets/overlays/light_bokeh_overlay.png",
-      "current_staged_file": "public/assets/overlays/light_bokeh_overlay.png",
+      "expected_by_library": "assets/fvsd-faceoff/overlays/light_bokeh_overlay.png",
+      "current_staged_file": "assets/fvsd-faceoff/overlays/light_bokeh_overlay.png",
       "matches": true,
       "exists": true,
       "needs_webp_conversion": false,
       "needs_rename": false
     },
     {
-      "expected_by_library": "public/assets/overlays/aurora_glow_overlay.png",
-      "current_staged_file": "public/assets/overlays/aurora_glow_overlay.png",
+      "expected_by_library": "assets/fvsd-faceoff/overlays/aurora_glow_overlay.png",
+      "current_staged_file": "assets/fvsd-faceoff/overlays/aurora_glow_overlay.png",
       "matches": true,
       "exists": true,
       "needs_webp_conversion": false,
       "needs_rename": false
     },
     {
-      "expected_by_library": "public/assets/overlays/horizon_haze.png",
-      "current_staged_file": "public/assets/overlays/horizon_haze.png",
+      "expected_by_library": "assets/fvsd-faceoff/overlays/horizon_haze.png",
+      "current_staged_file": "assets/fvsd-faceoff/overlays/horizon_haze.png",
       "matches": true,
       "exists": true,
       "needs_webp_conversion": false,

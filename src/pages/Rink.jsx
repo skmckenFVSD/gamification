@@ -15,43 +15,16 @@ import {
 import Scoreboard from "../components/faceoff/Scoreboard.tsx";
 import MetricCard from "../components/faceoff/MetricCard.tsx";
 import Leaderboard from "../components/faceoff/Leaderboard.tsx";
+import SeasonalAtmosphere from "../components/faceoff/SeasonalAtmosphere.tsx";
 import { useSeason } from "../context/SeasonContext.jsx";
 
 const assetPath = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 export default function Rink() {
-  const { theme } = useSeason();
+  const { theme, season } = useSeason();
 
   return (
     <div className="faceoff-dashboard">
-      <div className="dashboard-rink-layer" aria-hidden="true">
-        <img
-          className="dashboard-rink-surface"
-          src={theme.rinkImage}
-          alt=""
-          aria-hidden="true"
-        />
-        <img
-          className="dashboard-rink-markings"
-          src={assetPath("assets/fvsd-faceoff/rink/rink_markings_overlay.png")}
-          alt=""
-          aria-hidden="true"
-        />
-        <img
-          className="dashboard-rink-boards"
-          src={assetPath("assets/fvsd-faceoff/rink/rink_boards_overlay.png")}
-          alt=""
-          aria-hidden="true"
-        />
-        <img
-          className="dashboard-rink-ice"
-          src={assetPath("assets/fvsd-faceoff/rink/details/wet_reflections_overlay.png")}
-          alt=""
-          aria-hidden="true"
-        />
-        <div className="dashboard-rink-fade" />
-      </div>
-
       <section className="faceoff-hero-stage">
         <div className="faceoff-dashboard-hero__copy">
           <div className="faceoff-season-chip" style={{ color: theme.colors.primary }}>
@@ -77,6 +50,7 @@ export default function Rink() {
         </div>
 
         <div className="faceoff-hero-visual-scene" aria-label="FVSD Faceoff rink scene">
+          <SeasonalAtmosphere season={season} />
           <div className="faceoff-hero-scoreboard">
             <Scoreboard theme={theme} />
           </div>

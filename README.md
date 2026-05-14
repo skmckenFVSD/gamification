@@ -266,6 +266,14 @@ Current development focuses on:
 - League standings
 - Enhanced gamification systems
 
+### Game Manager Submission Rules (Planned)
+
+To protect scoreboard layout and prevent team-name overflow in the live matchup panels, team names submitted/edited in Game Manager will enforce a character limit.
+
+- Rule target: Team name max length of 24 characters
+- Scope: Team creation and team rename flows managed by Department Heads in Game Manager
+- Validation: Enforce in submission rules and show a clear UI error when exceeded
+
 ## V2 (Planned)
 
 Future architecture introduces:
