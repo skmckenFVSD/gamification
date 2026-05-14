@@ -1,0 +1,463 @@
+:root {
+  --faceoff-font-display: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --faceoff-radius-sm: 0.75rem;
+  --faceoff-radius-md: 1rem;
+  --faceoff-radius-lg: 1.5rem;
+  --faceoff-radius-xl: 2rem;
+  --faceoff-blur: 22px;
+  --faceoff-transition: 180ms ease;
+  --faceoff-topbar-h: 64px;
+}
+
+/* ---------------- Season palettes ---------------- */
+.faceoff-app {
+  --season-page-from: #03101F;
+  --season-page-via: #071940;
+  --season-page-to: #020712;
+  --season-primary: #23D5FF;
+  --season-secondary: #6A00FF;
+  --season-tertiary: #00E5FF;
+  --season-ice: #E6F6FF;
+  --season-text: #FFFFFF;
+  --season-muted: #D9E6F2;
+  --season-panel: rgba(7, 25, 64, 0.62);
+  --season-panel-strong: rgba(2, 7, 18, 0.82);
+  --season-border: rgba(35, 213, 255, 0.28);
+  --season-glow: rgba(35, 213, 255, 0.44);
+  --season-glow-soft: rgba(35, 213, 255, 0.18);
+  --season-danger: #FF4D4D;
+  --season-success: #63FF91;
+  --season-warning: #FFC857;
+  color: var(--season-text);
+  font-family: var(--faceoff-font-display);
+}
+
+.faceoff-app.season-fall {
+  --season-page-from: #120A05;
+  --season-page-via: #1B2230;
+  --season-page-to: #071321;
+  --season-primary: #FF8C00;
+  --season-secondary: #F4B942;
+  --season-tertiary: #8B4513;
+  --season-ice: #BBDDF2;
+  --season-muted: #D9E6F2;
+  --season-panel: rgba(7, 25, 64, 0.58);
+  --season-panel-strong: rgba(10, 18, 32, 0.78);
+  --season-border: rgba(255, 184, 72, 0.28);
+  --season-glow: rgba(255, 140, 0, 0.42);
+  --season-glow-soft: rgba(255, 140, 0, 0.18);
+}
+
+.faceoff-app.season-winter {
+  --season-page-from: #03101F;
+  --season-page-via: #071940;
+  --season-page-to: #020712;
+  --season-primary: #23D5FF;
+  --season-secondary: #6A00FF;
+  --season-tertiary: #00E5FF;
+  --season-ice: #E6F6FF;
+  --season-muted: #D9E6F2;
+  --season-panel: rgba(7, 25, 64, 0.62);
+  --season-panel-strong: rgba(2, 7, 18, 0.82);
+  --season-border: rgba(35, 213, 255, 0.28);
+  --season-glow: rgba(35, 213, 255, 0.44);
+  --season-glow-soft: rgba(35, 213, 255, 0.18);
+}
+
+.faceoff-app.season-spring {
+  --season-page-from: #061F25;
+  --season-page-via: #092A35;
+  --season-page-to: #071321;
+  --season-primary: #6EE7F2;
+  --season-secondary: #00D4C8;
+  --season-tertiary: #B9F6FF;
+  --season-ice: #F2F7FA;
+  --season-muted: #E7F3F7;
+  --season-panel: rgba(8, 40, 52, 0.58);
+  --season-panel-strong: rgba(5, 18, 28, 0.78);
+  --season-border: rgba(110, 231, 242, 0.28);
+  --season-glow: rgba(110, 231, 242, 0.38);
+  --season-glow-soft: rgba(110, 231, 242, 0.16);
+}
+
+/* ---------------- Backgrounds and atmosphere ---------------- */
+.faceoff-season-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 10%, var(--season-glow-soft), transparent 28%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08), transparent 24%),
+    linear-gradient(135deg, var(--season-page-from), var(--season-page-via), var(--season-page-to));
+}
+
+.faceoff-season-background-image {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.42;
+}
+
+.faceoff-season-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: screen;
+  opacity: 0.55;
+}
+
+.faceoff-vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.18), rgba(7,25,64,0.66) 48%, rgba(0,0,0,0.92)),
+    radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.54) 100%);
+}
+
+/* ---------------- Frame and shell ---------------- */
+.faceoff-shell {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--season-text);
+}
+
+.faceoff-frame {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: calc(var(--faceoff-topbar-h) + 28px) 24px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.faceoff-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  height: var(--faceoff-topbar-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: linear-gradient(180deg, rgba(2,7,18,0.82), rgba(2,7,18,0.55));
+  border-bottom: 1px solid var(--season-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.faceoff-topbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--season-text);
+  text-decoration: none;
+}
+
+.faceoff-topbar-brand .puck { font-size: 22px; }
+.faceoff-topbar-brand .wordmark { font-size: 16px; }
+.faceoff-topbar-brand .accent { color: var(--season-primary); }
+
+.faceoff-topbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.faceoff-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--season-muted);
+  text-decoration: none;
+  border-radius: var(--faceoff-radius-sm);
+  border: 1px solid transparent;
+  transition: color var(--faceoff-transition), background var(--faceoff-transition), border-color var(--faceoff-transition);
+}
+
+.faceoff-nav-link:hover {
+  color: var(--season-text);
+  background: rgba(255,255,255,0.06);
+}
+
+.faceoff-nav-link.is-active {
+  color: var(--season-text);
+  background: var(--season-glow-soft);
+  border-color: var(--season-border);
+}
+
+.faceoff-season-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--season-border);
+  background: rgba(255,255,255,0.06);
+  color: var(--season-primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.faceoff-season-pill:hover {
+  background: var(--season-glow-soft);
+}
+
+/* ---------------- Slots ---------------- */
+.faceoff-slot {
+  position: relative;
+}
+
+.faceoff-slot-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .faceoff-slot-hero {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+}
+
+.faceoff-slot-scoreboard {
+  width: 100%;
+}
+
+.faceoff-slot-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .faceoff-slot-metrics {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.faceoff-slot-supporting {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 1024px) {
+  .faceoff-slot-supporting {
+    grid-template-columns: 1fr 1fr 1.2fr;
+  }
+}
+
+/* ---------------- Glass and panels ---------------- */
+.faceoff-glass {
+  background: var(--season-panel);
+  border: 1px solid var(--season-border);
+  border-radius: var(--faceoff-radius-lg);
+  backdrop-filter: blur(var(--faceoff-blur));
+  -webkit-backdrop-filter: blur(var(--faceoff-blur));
+  box-shadow:
+    0 0 42px var(--season-glow-soft),
+    inset 0 1px 0 rgba(255,255,255,0.14),
+    inset 0 -1px 0 rgba(255,255,255,0.06);
+}
+
+.faceoff-glass-strong {
+  background: var(--season-panel-strong);
+  border: 1px solid var(--season-border);
+  border-radius: var(--faceoff-radius-xl);
+  box-shadow:
+    0 0 54px var(--season-glow-soft),
+    inset 0 1px 0 rgba(255,255,255,0.16);
+}
+
+.faceoff-neon-border {
+  position: relative;
+}
+
+.faceoff-neon-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--season-primary), transparent 35%, var(--season-secondary));
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ---------------- Controls ---------------- */
+.faceoff-button-primary {
+  background: linear-gradient(135deg, var(--season-primary), #2F6BFF);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: var(--faceoff-radius-md);
+  box-shadow: 0 0 28px var(--season-glow-soft);
+  color: white;
+  transition: transform var(--faceoff-transition), box-shadow var(--faceoff-transition), filter var(--faceoff-transition);
+}
+
+.faceoff-button-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 0 38px var(--season-glow);
+}
+
+.faceoff-button-secondary {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--season-border);
+  border-radius: var(--faceoff-radius-md);
+  color: var(--season-text);
+}
+
+.faceoff-input {
+  background: rgba(0,0,0,0.28);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: var(--faceoff-radius-sm);
+  color: var(--season-text);
+  outline: none;
+}
+
+.faceoff-input:focus {
+  border-color: var(--season-primary);
+  box-shadow: 0 0 0 3px var(--season-glow-soft);
+}
+
+/* ---------------- Scoreboard ---------------- */
+.faceoff-scoreboard {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.08), transparent 16%),
+    var(--season-panel-strong);
+  border: 1px solid var(--season-border);
+  border-radius: 1.75rem;
+  box-shadow:
+    0 0 60px var(--season-glow-soft),
+    inset 0 1px 0 rgba(255,255,255,0.16),
+    inset 0 -20px 45px rgba(0,0,0,0.26);
+}
+
+.faceoff-scoreboard-topline {
+  background: linear-gradient(90deg, transparent, var(--season-primary), transparent);
+  box-shadow: 0 0 24px var(--season-glow);
+}
+
+.faceoff-metric-card {
+  background: rgba(0,0,0,0.28);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--faceoff-radius-md);
+}
+
+.faceoff-metric-card:hover {
+  border-color: var(--season-border);
+  box-shadow: 0 0 24px var(--season-glow-soft);
+}
+
+.faceoff-progress-track {
+  background: rgba(255,255,255,0.12);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.faceoff-progress-fill {
+  background: linear-gradient(90deg, var(--season-primary), var(--season-secondary));
+  box-shadow: 0 0 18px var(--season-glow);
+}
+
+/* ---------------- Badges and toasts ---------------- */
+.faceoff-badge {
+  background:
+    radial-gradient(circle at 50% 20%, var(--season-glow-soft), transparent 50%),
+    rgba(0,0,0,0.3);
+  border: 1px solid var(--season-border);
+  border-radius: 1.25rem;
+}
+
+.faceoff-toast-success { border-color: rgba(99,255,145,0.4); box-shadow: 0 0 26px rgba(99,255,145,0.18); }
+.faceoff-toast-info { border-color: var(--season-border); box-shadow: 0 0 26px var(--season-glow-soft); }
+.faceoff-toast-warning { border-color: rgba(255,200,87,0.45); box-shadow: 0 0 26px rgba(255,200,87,0.18); }
+.faceoff-toast-error { border-color: rgba(255,77,77,0.45); box-shadow: 0 0 26px rgba(255,77,77,0.18); }
+
+/* ---------------- Motion ---------------- */
+.faceoff-aurora-motion {
+  animation: auroraDrift 12s ease-in-out infinite alternate;
+}
+
+.faceoff-snow-motion {
+  animation: snowDrift 18s linear infinite;
+}
+
+.faceoff-pulse-glow {
+  animation: pulseGlow 2.4s ease-in-out infinite;
+}
+
+@keyframes auroraDrift {
+  from { transform: translate3d(-1.5%, -0.5%, 0) scale(1.02); opacity: 0.52; }
+  to { transform: translate3d(1.5%, 0.5%, 0) scale(1.06); opacity: 0.82; }
+}
+
+@keyframes snowDrift {
+  from { transform: translate3d(0, -4%, 0); }
+  to { transform: translate3d(2%, 4%, 0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 22px var(--season-glow-soft); }
+  50% { box-shadow: 0 0 44px var(--season-glow); }
+}
+
+/* ---------------- Footer ---------------- */
+.faceoff-footer {
+  position: relative;
+  z-index: 1;
+  padding: 24px 24px 32px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--season-muted);
+  border-top: 1px solid var(--season-border);
+  background: rgba(2,7,18,0.45);
+}
+
+/* ---------------- Responsive trims ---------------- */
+@media (max-width: 768px) {
+  .faceoff-glass,
+  .faceoff-glass-strong,
+  .faceoff-scoreboard {
+    border-radius: var(--faceoff-radius-md);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .faceoff-topbar-nav .label {
+    display: none;
+  }
+
+  .faceoff-frame {
+    padding: calc(var(--faceoff-topbar-h) + 16px) 14px 48px;
+    gap: 20px;
+  }
+}

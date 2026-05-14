@@ -1,16 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { HashRouter } from 'react-router-dom'
-import App from './App.jsx'
-import { AppProvider } from './context/AppContext.jsx'
-import './styles/global.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import "./styles.css";
+import "./styles/faceoff-season.css";
+import App from "./App.jsx";
+import { SeasonProvider } from "./context/SeasonContext.jsx";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <HashRouter>
-      <AppProvider>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <SeasonProvider>
         <App />
-      </AppProvider>
-    </HashRouter>
-  </StrictMode>,
-)
+      </SeasonProvider>
+    </BrowserRouter>
+  </React.StrictMode>
+);
