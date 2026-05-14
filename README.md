@@ -6,10 +6,6 @@
 
 </div>
 
-<div align="center">
-
-<img src="./public/copilot-rink-logo.svg" alt="FVSD Faceoff Logo" width="220" />
-
 # FVSD Faceoff
 ### Competing Together for the Future of AI in Education
 
