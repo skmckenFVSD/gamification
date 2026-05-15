@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import {
   Award,
@@ -12,31 +12,70 @@ import {
   Menu,
   Star,
   Target,
-  UserCircle2,
   X,
 } from "lucide-react";
 import { useSeason } from "../../context/SeasonContext.jsx";
+import { useAuth } from "../../context/AuthContext.jsx";
 import SeasonalBackground from "./SeasonalBackground.tsx";
 import FaceoffFrame from "./FaceoffFrame.tsx";
 
-const navItems = [
+const primaryNavItems = [
   { to: "/", label: "Dashboard", icon: Home, end: true },
   { to: "/games", label: "Games", icon: CircleGauge },
   { to: "/leaderboard", label: "Leaderboard", icon: BarChart3 },
   { to: "/challenges", label: "Challenges", icon: Target },
-  { to: "/achievements", label: "Achievements", icon: Award },
   { to: "/arcade", label: "Arcade", icon: Gamepad2 },
   { to: "/hall-of-fame", label: "Hall of Fame", icon: Star },
-  { to: "/game-manager", label: "Game Manager", icon: CalendarRange, admin: true },
+];
+
+const playerActionItems = [
+  { to: "/achievements", label: "Achievements", icon: Award },
+  { to: "/post-a-win", label: "Post a Win", icon: FileText },
 ];
 
 function navClass({ isActive }) {
   return `faceoff-nav-link ${isActive ? "is-active" : ""}`;
 }
 
+function actionClass({ isActive }) {
+  return `faceoff-action-link ${isActive ? "is-active" : ""}`;
+}
+
 export default function FaceoffAppShell({ children }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { theme, season, cycleSeason } = useSeason();
+  const [periodOpen, setPeriodOpen] = useState(false);
+  const { theme, themes, season, seasons, setSeason } = useSeason();
+  const { isAuthenticated, currentUser, handleMockSignIn } = useAuth();
+  const periodMenuRef = useRef<HTMLDivElement | null>(null);
+
+  const canManageGames = Boolean(isAuthenticated && currentUser?.permissions?.canManageGames);
+  const signInPuckSrc = `${import.meta.env.BASE_URL}assets/fvsd-faceoff/traitpills/trait_puck_hover.png`;
+  const profileImageSrc = currentUser?.profileImageUrl;
+
+  useEffect(() => {
+    function onPointerDown(event: MouseEvent) {
+      if (!periodMenuRef.current) {
+        return;
+      }
+      if (!periodMenuRef.current.contains(event.target as Node)) {
+        setPeriodOpen(false);
+      }
+    }
+
+    function onEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setPeriodOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", onPointerDown);
+    document.addEventListener("keydown", onEscape);
+
+    return () => {
+      document.removeEventListener("mousedown", onPointerDown);
+      document.removeEventListener("keydown", onEscape);
+    };
+  }, []);
 
   return (
     <div className={`faceoff-app faceoff-shell ${theme.className}`}>
@@ -53,6 +92,128 @@ export default function FaceoffAppShell({ children }) {
           </span>
         </NavLink>
 
+        <nav
+          id="faceoff-primary-menu"
+          className={`faceoff-topbar-nav ${menuOpen ? "is-open" : ""}`}
+          aria-label="Primary"
+        >
+          {primaryNavItems.map(({ to, label, icon: Icon, end }) => (
+            <NavLink
+              key={to}
+              to={to}
+              end={end}
+              className={navClass}
+              onClick={() => setMenuOpen(false)}
+            >
+              <Icon size={15} aria-hidden="true" />
+              <span className="label">{label}</span>
+            </NavLink>
+          ))}
+
+          {isAuthenticated && (
+            <>
+              {playerActionItems.map(({ to, label, icon: Icon }) => (
+                <NavLink
+                  key={`mobile-${to}`}
+                  to={to}
+                  className={({ isActive }) => `${navClass({ isActive })} faceoff-nav-link--mobile-only`}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <Icon size={15} aria-hidden="true" />
+                  <span className="label">{label}</span>
+                </NavLink>
+              ))}
+              {canManageGames && (
+                <NavLink
+                  to="/game-manager"
+                  className={({ isActive }) => `${navClass({ isActive })} faceoff-nav-link--mobile-only is-admin`}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <CalendarRange size={15} aria-hidden="true" />
+                  <span className="label">Game Manager</span>
+                </NavLink>
+              )}
+            </>
+          )}
+        </nav>
+
+        <div className="faceoff-topbar-actions">
+          {isAuthenticated ? (
+            <>
+              {playerActionItems.map(({ to, label, icon: Icon }) => (
+                <NavLink
+                  key={`desktop-${to}`}
+                  to={to}
+                  className={({ isActive }) => `${actionClass({ isActive })} faceoff-action-link--desktop`}
+                >
+                  <Icon size={15} aria-hidden="true" />
+                  <span className="label">{label}</span>
+                </NavLink>
+              ))}
+
+              {canManageGames && (
+                <NavLink
+                  to="/game-manager"
+                  className={({ isActive }) => `${actionClass({ isActive })} faceoff-action-link--desktop is-admin`}
+                >
+                  <CalendarRange size={15} aria-hidden="true" />
+                  <span className="label">Game Manager</span>
+                </NavLink>
+              )}
+
+              <div className="faceoff-season-select-wrap" aria-label="Period selector" ref={periodMenuRef}>
+                <span className="faceoff-season-select-wrap__dot" aria-hidden="true" />
+                <button
+                  type="button"
+                  className="faceoff-season-select-trigger"
+                  onClick={() => setPeriodOpen((open) => !open)}
+                  aria-haspopup="listbox"
+                  aria-expanded={periodOpen}
+                  aria-label={`Select period, currently ${theme.label}`}
+                >
+                  {themes[season]?.name ?? season}
+                </button>
+                <ChevronDown size={13} aria-hidden="true" className="faceoff-season-select-wrap__chevron" />
+                {periodOpen && (
+                  <div className="faceoff-season-select-menu" role="listbox" aria-label="Periods">
+                    {seasons.map((seasonId) => {
+                      const isSelected = seasonId === season;
+                      return (
+                        <button
+                          key={seasonId}
+                          type="button"
+                          role="option"
+                          aria-selected={isSelected}
+                          className={`faceoff-season-option ${isSelected ? "is-selected" : ""}`}
+                          onClick={() => {
+                            setSeason(seasonId);
+                            setPeriodOpen(false);
+                          }}
+                        >
+                          {themes[seasonId]?.name ?? seasonId}
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+
+              <NavLink to="/profile" className="faceoff-profile-avatar" aria-label="Profile">
+                {profileImageSrc ? (
+                  <img src={profileImageSrc} alt={`${currentUser.displayName} profile`} loading="lazy" />
+                ) : (
+                  <span>{currentUser?.displayName?.charAt(0) ?? "P"}</span>
+                )}
+              </NavLink>
+            </>
+          ) : (
+            <button type="button" className="faceoff-signin-button" onClick={handleMockSignIn}>
+              <img src={signInPuckSrc} alt="" aria-hidden="true" className="faceoff-signin-button__puck" />
+              <span>Sign In</span>
+            </button>
+          )}
+        </div>
+
         <button
           type="button"
           className="faceoff-menu-toggle"
@@ -63,48 +224,6 @@ export default function FaceoffAppShell({ children }) {
           {menuOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
           <span>Menu</span>
         </button>
-
-        <nav
-          id="faceoff-primary-menu"
-          className={`faceoff-topbar-nav ${menuOpen ? "is-open" : ""}`}
-          aria-label="Primary"
-        >
-          {navItems.map(({ to, label, icon: Icon, end }) => (
-            <NavLink
-              key={to}
-              to={to}
-              end={end}
-              className={({ isActive }) =>
-                `${navClass({ isActive })} ${to === "/game-manager" ? "is-admin" : ""}`
-              }
-              onClick={() => setMenuOpen(false)}
-            >
-              <Icon size={15} aria-hidden="true" />
-              <span className="label">{label}</span>
-            </NavLink>
-          ))}
-          <NavLink
-            to="/post-a-win"
-            className={navClass}
-            onClick={() => setMenuOpen(false)}
-          >
-            <FileText size={15} aria-hidden="true" />
-            <span className="label">Post a Win</span>
-          </NavLink>
-          <NavLink to="/profile" className={navClass} aria-label="Profile" onClick={() => setMenuOpen(false)}>
-            <UserCircle2 size={17} aria-hidden="true" />
-          </NavLink>
-          <button
-            type="button"
-            onClick={cycleSeason}
-            className="faceoff-season-pill"
-            aria-label={`Switch season, currently ${theme.label}`}
-          >
-            <span className="faceoff-season-pill__dot" />
-            <span>{season}</span>
-            <ChevronDown size={13} aria-hidden="true" />
-          </button>
-        </nav>
       </header>
       <FaceoffFrame>{children}</FaceoffFrame>
       <footer className="faceoff-footer">

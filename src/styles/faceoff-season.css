@@ -188,6 +188,17 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-left: 16px;
+}
+
+.faceoff-topbar-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex: 0 0 auto;
 }
 
 .faceoff-menu-toggle {
@@ -217,6 +228,109 @@
   border-radius: var(--faceoff-radius-sm);
   border: 1px solid transparent;
   transition: color var(--faceoff-transition), background var(--faceoff-transition), border-color var(--faceoff-transition);
+}
+
+.faceoff-action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--season-muted);
+  text-decoration: none;
+  border-radius: var(--faceoff-radius-sm);
+  border: 1px solid transparent;
+  transition: color var(--faceoff-transition), background var(--faceoff-transition), border-color var(--faceoff-transition);
+}
+
+.faceoff-action-link:hover {
+  color: var(--season-text);
+  background: rgba(255,255,255,0.06);
+}
+
+.faceoff-action-link.is-active {
+  color: var(--season-text);
+  background: var(--season-glow-soft);
+  border-color: var(--season-border);
+}
+
+.faceoff-action-link.is-admin {
+  border-color: rgba(255, 200, 87, 0.4);
+  color: #ffe2a3;
+  background: rgba(255, 200, 87, 0.08);
+}
+
+.faceoff-action-link.is-admin.is-active {
+  background: rgba(255, 200, 87, 0.16);
+  box-shadow: 0 0 22px rgba(255, 200, 87, 0.12);
+}
+
+.faceoff-nav-link--mobile-only {
+  display: none;
+}
+
+.faceoff-action-link--desktop {
+  display: inline-flex;
+}
+
+.faceoff-signin-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 7px 14px 7px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(88, 225, 255, 0.62);
+  background:
+    radial-gradient(circle at 18% 50%, rgba(103, 234, 255, 0.2), transparent 54%),
+    linear-gradient(140deg, rgba(8, 34, 65, 0.92), rgba(11, 56, 96, 0.8));
+  color: #e8f9ff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow:
+    0 0 22px rgba(92, 224, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  transition: transform var(--faceoff-transition), box-shadow var(--faceoff-transition), filter var(--faceoff-transition);
+}
+
+.faceoff-signin-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+  box-shadow:
+    0 0 28px rgba(92, 224, 255, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.faceoff-signin-button__puck {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(111, 233, 255, 0.46));
+}
+
+.faceoff-profile-avatar {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--season-border);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--season-text);
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 0 14px rgba(0,0,0,0.26);
+}
+
+.faceoff-profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .faceoff-nav-link:hover {
@@ -258,6 +372,113 @@
 
 .faceoff-season-pill:hover {
   background: var(--season-glow-soft);
+}
+
+.faceoff-season-select-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-width: 148px;
+  height: 36px;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid var(--season-border);
+  background: rgba(255,255,255,0.06);
+  transition: border-color var(--faceoff-transition), background var(--faceoff-transition);
+}
+
+.faceoff-season-select-wrap:hover {
+  border-color: rgba(132, 229, 255, 0.5);
+  background: rgba(255,255,255,0.1);
+}
+
+.faceoff-season-select-wrap__dot {
+  position: absolute;
+  left: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--season-primary);
+  box-shadow: 0 0 16px var(--season-glow);
+  pointer-events: none;
+}
+
+.faceoff-season-select-wrap__chevron {
+  position: absolute;
+  right: 10px;
+  color: var(--season-muted);
+  pointer-events: none;
+}
+
+.faceoff-season-select-trigger {
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent !important;
+  color: var(--season-primary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 32px 0 28px;
+  margin: 0;
+  text-align: left;
+}
+
+.faceoff-season-select-trigger:focus {
+  outline: none;
+}
+
+.faceoff-season-select-wrap:focus-within {
+  border-color: rgba(132, 229, 255, 0.62);
+  box-shadow: 0 0 0 2px rgba(69, 198, 243, 0.22), 0 0 20px rgba(92, 224, 255, 0.18);
+}
+
+.faceoff-season-select-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  display: grid;
+  gap: 2px;
+  padding: 6px;
+  border-radius: 12px;
+  border: 1px solid rgba(115, 216, 255, 0.4);
+  background: rgba(6, 20, 39, 0.95);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.34), 0 0 24px rgba(94, 217, 255, 0.14);
+  z-index: 60;
+}
+
+.faceoff-season-option {
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #e8f6ff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  min-height: 32px;
+  padding: 0 10px 0 14px;
+  text-align: left;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.faceoff-season-option:hover {
+  background: rgba(122, 224, 255, 0.14);
+}
+
+.faceoff-season-option.is-selected {
+  background: rgba(122, 224, 255, 0.2);
+  color: #ffffff;
 }
 
 /* ---------------- Slots ---------------- */
@@ -2257,7 +2478,7 @@
 
   .faceoff-menu-toggle {
     display: inline-flex;
-    margin-left: auto;
+    margin-left: 0;
   }
 
   .faceoff-topbar-nav {
@@ -2289,10 +2510,29 @@
     transform: translateY(0);
   }
 
-  .faceoff-nav-link,
-  .faceoff-season-pill {
+  .faceoff-topbar-nav .faceoff-nav-link,
+  .faceoff-topbar-nav .faceoff-nav-link--mobile-only,
+  .faceoff-topbar-nav .faceoff-season-select-wrap {
     width: 100%;
     justify-content: flex-start;
+  }
+
+  .faceoff-nav-link--mobile-only {
+    display: inline-flex;
+  }
+
+  .faceoff-action-link--desktop {
+    display: none;
+  }
+
+  .faceoff-topbar-actions {
+    margin-left: auto;
+  }
+
+  .faceoff-topbar-actions .faceoff-season-select-wrap,
+  .faceoff-topbar-actions .faceoff-profile-avatar,
+  .faceoff-topbar-actions .faceoff-signin-button {
+    width: auto;
   }
 
   .faceoff-topbar-nav .label {
@@ -2574,13 +2814,22 @@
 
   .faceoff-menu-toggle {
     display: inline-flex;
-    margin-left: auto;
+    margin-left: 0;
   }
 
-  .faceoff-nav-link,
-  .faceoff-season-pill {
+  .faceoff-topbar-nav .faceoff-nav-link,
+  .faceoff-topbar-nav .faceoff-nav-link--mobile-only,
+  .faceoff-topbar-nav .faceoff-season-select-wrap {
     width: 100%;
     justify-content: flex-start;
+  }
+
+  .faceoff-nav-link--mobile-only {
+    display: inline-flex;
+  }
+
+  .faceoff-action-link--desktop {
+    display: none;
   }
 
   .faceoff-topbar-nav .label {

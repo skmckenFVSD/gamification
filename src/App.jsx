@@ -13,8 +13,12 @@ import GameManager from "./pages/GameManager.jsx";
 import HallOfFame from "./pages/HallOfFame.jsx";
 import Profile from "./pages/Profile.tsx";
 import Preview from "./pages/Preview.jsx";
+import { useAuth } from "./context/AuthContext.jsx";
 
 export default function App() {
+  const { isAuthenticated, currentUser } = useAuth();
+  const canManageGames = Boolean(isAuthenticated && currentUser?.permissions?.canManageGames);
+
   return (
     <Routes>
       <Route path="/preview" element={<Preview />} />
@@ -29,12 +33,12 @@ export default function App() {
               <Route path="/leaderboard" element={<Leaderboard />} />
               <Route path="/standings" element={<Standings />} />
               <Route path="/challenges" element={<Challenges />} />
-              <Route path="/achievements" element={<Achievements />} />
-              <Route path="/post-a-win" element={<PostAWin />} />
+              <Route path="/achievements" element={isAuthenticated ? <Achievements /> : <Navigate to="/" replace />} />
+              <Route path="/post-a-win" element={isAuthenticated ? <PostAWin /> : <Navigate to="/" replace />} />
               <Route path="/arcade" element={<Arcade />} />
               <Route path="/hall-of-fame" element={<HallOfFame />} />
-              <Route path="/game-manager" element={<GameManager />} />
-              <Route path="/profile" element={<Profile />} />
+              <Route path="/game-manager" element={canManageGames ? <GameManager /> : <Navigate to="/" replace />} />
+              <Route path="/profile" element={isAuthenticated ? <Profile /> : <Navigate to="/" replace />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </FaceoffAppShell>

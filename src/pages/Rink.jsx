@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {
   ChevronRight,
-  Grid2X2,
+  CircleGauge,
   MessageSquareText,
   PlayCircle,
   ShieldCheck,
@@ -40,8 +40,8 @@ export default function Rink() {
             adoption into a visible hockey season for the whole Division.
           </p>
           <div className="faceoff-dashboard-actions">
-            <Link className="faceoff-button-primary" to="/leaderboard">
-              <Grid2X2 size={18} /> View Dashboard
+            <Link className="faceoff-button-primary" to="/games">
+              <CircleGauge size={18} /> View Games
             </Link>
             <Link className="faceoff-button-secondary" to="/games">
               <PlayCircle size={18} /> How It Works
