@@ -286,6 +286,85 @@ Future architecture introduces:
 - Automated challenge generation
 - Live data services
 
+### V1.5 Data and Integration Architecture (Decision Baseline)
+
+To support Azure Web App hosting, Entra ID SSO, and long-term operational reliability, FVSD Faceoff will use the following data model and service boundaries.
+
+#### Source of Truth
+
+- Dataverse is the system of record for gameplay and management entities.
+- Graph and Viva metrics are external source feeds, not gameplay truth tables.
+- JSON files remain seed/dev-only and are not production truth.
+
+#### Runtime Data Access Pattern
+
+- Frontend does not call Dataverse directly.
+- Frontend calls a thin backend API hosted on App Service (or Functions).
+- Backend API handles Dataverse reads/writes, authorization, and scoring orchestration.
+
+#### Graph and Viva Metrics Pattern
+
+- A scheduled sync worker pulls Graph/Viva metrics periodically.
+- Sync writes snapshots into Dataverse metrics tables.
+- App consumes snapshots through API endpoints.
+- Sync is additive/diagnostic and never replaces core gameplay transactions.
+
+#### Core Dataverse Tables (V1.5 Target)
+
+- Teams
+- Users
+- TeamMemberships
+- Seasons
+- Games
+- GameRules
+- WinSubmissions
+- VerificationEvents
+- TeamScoreSnapshots
+- UserAchievementProgress
+- Badges
+- BadgeAwards
+- VivaMetricSnapshots
+- SyncRuns
+- AppSettings
+
+#### Security and Authentication
+
+- Entra ID SSO at the app layer.
+- API validates user identity and role before writes.
+- Dataverse access stays server-side under least-privilege app identity.
+- Verification and Game Manager actions are role-gated.
+
+#### API Contract Direction (V1.5)
+
+- `GET /api/game/current`
+- `GET /api/teams`
+- `GET /api/me`
+- `POST /api/wins`
+- `GET /api/wins?scope=me|team|game`
+- `POST /api/wins/{id}/verify`
+- `GET /api/leaderboard`
+- `GET /api/achievements`
+- `GET /api/notifications`
+- `GET /api/admin/game-rules`
+- `PUT /api/admin/game-rules`
+
+#### Deployment and Rollout Strategy
+
+- Keep seed mode for local/demo (`DATA_MODE=seed`).
+- Add Dataverse mode for integration/prod (`DATA_MODE=dataverse`).
+- Phase migration by feature vertical:
+  1. Users/Teams
+  2. Win submissions and verification
+  3. Leaderboard and score snapshots
+  4. Achievements
+  5. Graph/Viva sync
+
+#### Explicit Decision
+
+- Do bake Dataverse into the core runtime architecture now.
+- Do use autonomous sync jobs for Graph/Viva ingestion and derived snapshots.
+- Do not use autonomous agent sync to JSON files as production data flow.
+
 ---
 
 # 🚀 Quick Start

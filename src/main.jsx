@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./styles.css";
 import "./styles/faceoff-season.css";
+import "./styles/profile-identity.css";
 import App from "./App.jsx";
 import { SeasonProvider } from "./context/SeasonContext.jsx";
 

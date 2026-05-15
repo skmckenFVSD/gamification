@@ -145,6 +145,13 @@
   gap: 28px;
 }
 
+.faceoff-frame--profile {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
 .faceoff-topbar {
   position: fixed;
   top: 0;
@@ -2240,6 +2247,234 @@
   60% {
     opacity: 0.22;
     transform: scale(0.72);
+  }
+}
+
+@media (max-width: 1200px) {
+  .faceoff-topbar-brand small {
+    display: none;
+  }
+
+  .faceoff-menu-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .faceoff-topbar-nav {
+    position: fixed;
+    top: calc(var(--faceoff-topbar-h) + 10px);
+    left: 14px;
+    right: 14px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    padding: 12px;
+    border: 1px solid var(--season-border);
+    border-radius: 14px;
+    background: rgba(2,7,18,0.94);
+    box-shadow: 0 18px 42px rgba(0,0,0,0.35);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition:
+      opacity var(--faceoff-transition),
+      transform var(--faceoff-transition);
+  }
+
+  .faceoff-topbar-nav.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .faceoff-nav-link,
+  .faceoff-season-pill {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .faceoff-topbar-nav .label {
+    display: inline;
+  }
+
+  .faceoff-hero-stage {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    height: auto;
+    padding: 7rem 5vw 5rem;
+    gap: 24px;
+  }
+
+  .faceoff-dashboard-hero__copy {
+    max-width: 760px;
+  }
+
+  .faceoff-hero-visual-scene {
+    min-height: 500px;
+  }
+
+  .faceoff-hero-scoreboard {
+    top: 2%;
+    right: 50%;
+    width: min(760px, 90%);
+    transform: translateX(50%);
+  }
+
+  .faceoff-hero-scoreboard .faceoff-scoreboard {
+    background: rgba(4, 10, 22, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+      0 24px 44px rgba(0, 0, 0, 0.44);
+    backdrop-filter: blur(14px) saturate(118%);
+    -webkit-backdrop-filter: blur(14px) saturate(118%);
+  }
+
+  .faceoff-hero-scoreboard .faceoff-scoreboard__header h2 {
+    color: rgba(255, 255, 255, 0.96);
+    text-shadow: 0 8px 18px rgba(0, 0, 0, 0.44);
+  }
+
+  .faceoff-hero-scoreboard .faceoff-team-panel,
+  .faceoff-hero-scoreboard .faceoff-game-clock {
+    background: rgba(2, 7, 18, 0.5);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .faceoff-hero-scoreboard .faceoff-team-panel__name,
+  .faceoff-hero-scoreboard .faceoff-team-panel__stats,
+  .faceoff-hero-scoreboard .faceoff-game-clock span,
+  .faceoff-hero-scoreboard .faceoff-game-clock small {
+    color: rgba(231, 241, 255, 0.88);
+  }
+
+  .faceoff-hero-player {
+    bottom: 4vh;
+    height: min(330px, 38vh);
+    z-index: 16;
+  }
+
+  .faceoff-hero-player--left {
+    left: clamp(10px, 5vw, 72px);
+    right: auto;
+  }
+
+  .faceoff-hero-player--right {
+    right: clamp(10px, 5vw, 72px);
+    left: auto;
+  }
+
+  .faceoff-dashboard-strip {
+    margin-top: 7vh;
+  }
+}
+
+@media (max-width: 1200px) and (max-height: 820px) {
+  .faceoff-hero-stage {
+    padding: 5.5rem 4vw 2.6rem;
+    gap: 14px;
+  }
+
+  .faceoff-hero-stage h1 {
+    font-size: clamp(3.1rem, 7vw, 5.1rem);
+    line-height: 0.9;
+  }
+
+  .faceoff-hero-stage p {
+    margin-top: 14px;
+    max-width: 640px;
+    font-size: 1.05rem;
+    line-height: 1.45;
+  }
+
+  .faceoff-dashboard-actions {
+    margin-top: 18px;
+  }
+
+  .faceoff-dashboard-hero__copy {
+    padding-bottom: 1.2vh;
+  }
+
+  .faceoff-hero-visual-scene {
+    min-height: 300px;
+  }
+
+  .faceoff-hero-scoreboard {
+    top: -9%;
+    width: min(640px, 84%);
+  }
+
+  .faceoff-hero-scoreboard .faceoff-scoreboard {
+    background: rgba(3, 8, 18, 0.8);
+    border-color: rgba(255, 255, 255, 0.24);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+      0 24px 44px rgba(0, 0, 0, 0.48);
+  }
+
+  .faceoff-hero-scoreboard .faceoff-scoreboard::before {
+    background:
+      linear-gradient(115deg, rgba(255,255,255,0.14), transparent 24%),
+      radial-gradient(circle at 50% 0%, rgba(255, 198, 118, 0.18), transparent 44%);
+  }
+
+  .faceoff-hero-scoreboard .faceoff-scoreboard__header {
+    margin-bottom: 14px;
+  }
+
+  .faceoff-hero-scoreboard .faceoff-scoreboard__header h2 {
+    color: rgba(255, 255, 255, 0.98);
+    text-shadow: 0 9px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .faceoff-hero-scoreboard .faceoff-team-panel,
+  .faceoff-hero-scoreboard .faceoff-game-clock {
+    background: rgba(2, 7, 18, 0.58);
+    border-color: rgba(255, 255, 255, 0.24);
+  }
+
+  .faceoff-hero-scoreboard .faceoff-team-panel__name,
+  .faceoff-hero-scoreboard .faceoff-team-panel__stats,
+  .faceoff-hero-scoreboard .faceoff-game-clock span,
+  .faceoff-hero-scoreboard .faceoff-game-clock small {
+    color: rgba(234, 244, 255, 0.92);
+  }
+
+  .faceoff-hero-player {
+    bottom: 1.2vh;
+    height: min(250px, 33vh);
+    z-index: 16;
+  }
+
+  .faceoff-hero-player--left {
+    left: clamp(6px, 4vw, 48px);
+    right: auto;
+  }
+
+  .faceoff-hero-player--right {
+    right: clamp(6px, 4vw, 48px);
+    left: auto;
+  }
+
+  .faceoff-dashboard-strip {
+    margin-top: 2.5vh;
+  }
+}
+
+@media (max-width: 1040px) and (max-height: 820px) {
+  .faceoff-hero-player {
+    height: min(220px, 29vh);
+  }
+
+  .faceoff-hero-player--left {
+    left: clamp(2px, 2.8vw, 28px);
+  }
+
+  .faceoff-hero-player--right {
+    right: clamp(2px, 2.8vw, 28px);
+    left: auto;
   }
 }
 

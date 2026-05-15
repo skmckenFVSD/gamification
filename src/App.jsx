@@ -11,7 +11,7 @@ import PostAWin from "./pages/PostAWin.jsx";
 import Arcade from "./pages/Arcade.jsx";
 import GameManager from "./pages/GameManager.jsx";
 import HallOfFame from "./pages/HallOfFame.jsx";
-import Profile from "./pages/Profile.jsx";
+import Profile from "./pages/Profile.tsx";
 import Preview from "./pages/Preview.jsx";
 
 export default function App() {
